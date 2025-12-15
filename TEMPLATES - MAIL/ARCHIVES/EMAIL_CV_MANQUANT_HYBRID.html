@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light dark">
+    <meta name="supported-color-schemes" content="light dark">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="date=no">
+    <meta name="format-detection" content="address=no">
+    <meta name="format-detection" content="email=no">
+    <link href="https://fonts.googleapis.com/css2?family=Rethink+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* 🔥 SOLUTION DEFINITIVE - ChatGPT approved */
+        
+        /* 1. Neutraliser auto-détection liens (Apple + Gmail) */
+        a[x-apple-data-detectors],
+        a[x-apple-data-detectors] *,
+        u + #body a,
+        .apple-link,
+        #MessageViewBody a {
+            color: inherit !important;
+            text-decoration: none !important;
+            background-color: transparent !important;
+            font-size: inherit !important;
+            font-family: inherit !important;
+        }
+        
+        /* 2. Protection Dark Mode "soft" - ChatGPT strategy */
+        @media (prefers-color-scheme: dark) {
+            .no-invert, .no-invert * {
+                background: #222222 !important;
+                color: #f5f5f7 !important;
+            }
+            
+            /* Mid-tones tolérantes à l'inversion */
+            body, table, td, font, a, div, p {
+                color: #f5f5f7 !important;
+                background-color: #222222 !important;
+            }
+            
+            .kandi-dark-bg {
+                background: #222222 !important;
+                background-color: #222222 !important;
+            }
+            
+            .kandi-light-text {
+                color: #f5f5f7 !important;
+            }
+        }
+        
+        /* 3. Design Kandi avec mid-tones */
+        body, table, td, font, a, div, p {
+            color: #f5f5f7 !important;
+            background-color: #222222 !important;
+        }
+        
+        /* 4. Protection mobile avec Gmail hacks */
+        @media only screen and (max-width: 600px) {
+            body, table, td, font, a, div, p {
+                color: #f5f5f7 !important;
+                background-color: #222222 !important;
+            }
+            
+            .email-wrapper {
+                background: linear-gradient(135deg, #222222 0%, #333333 100%) !important;
+                background-color: #222222 !important;
+            }
+            
+            .email-container {
+                background: #222222 !important;
+                background-color: #222222 !important;
+            }
+            
+            /* Gmail mobile hack - mix-blend-mode */
+            .gmail-screen {
+                mix-blend-mode: screen !important;
+            }
+            
+            .gmail-difference {
+                mix-blend-mode: difference !important;
+            }
+            
+            /* Anti-surlignage avec mid-tones */
+            .no-invert, .no-invert * {
+                color: #f5f5f7 !important;
+                background-color: #222222 !important;
+                text-decoration: none !important;
+                border: none !important;
+                outline: none !important;
+            }
+        }
+        
+        /* 5. Anti-override clients mobiles (Gmail, Apple Mail) */
+        [data-ogsc] body, [data-ogsc] table, [data-ogsc] td, [data-ogsc] font, [data-ogsc] a {
+            color: #ffffff !important;
+            background-color: #000000 !important;
+            text-decoration: none !important;
+        }
+        
+        /* 6. Protection globale anti-highlights */
+        *, *::before, *::after {
+            text-decoration: none !important;
+            background-color: transparent !important;
+            border: none !important;
+            outline: none !important;
+        }
+        
+        /* 7. Force couleurs sur les éléments critiques */
+        .urgency-box, .feature-item, .highlight-box, .cta-button {
+            background-color: inherit !important;
+            color: #ffffff !important;
+        }
+    </style>
+</head>
+<body style="margin: 0 !important; padding: 0 !important; background: linear-gradient(135deg, #222222 0%, #333333 100%) !important; background-color: #222222 !important; font-family: 'Rethink Sans', Arial, sans-serif !important; color: #f5f5f7 !important;">
+    
+    <!-- Wrapper avec dégradé -->
+    <div class="email-wrapper" style="width: 100% !important; background: linear-gradient(135deg, #222222 0%, #333333 100%) !important; background-color: #222222 !important; padding: 20px 0 !important; min-height: 100vh !important;">
+        
+        <!-- Container centré premium -->
+        <div class="email-container" style="max-width: 600px !important; margin: 0 auto !important; background: #222222 !important; background-color: #222222 !important; border-radius: 12px !important; box-shadow: 0 0 40px rgba(0, 0, 0, 0.8) !important; overflow: hidden !important;">
+            
+            <!-- Header avec logo -->
+            <table width="100%" style="background: #000000 !important; background-color: #000000 !important;" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td style="padding: 40px 32px 32px 32px; text-align: center; background: #000000 !important; background-color: #000000 !important;">
+                        <a href="https://kandi.jobs">
+                            <img src="https://i.imgur.com/oocjzXd.png" alt="Kandi Logo" style="max-width: 180px; height: auto; display: block; margin: 0 auto;">
+                        </a>
+                    </td>
+                </tr>
+            </table>
+            
+            <!-- Content principal -->
+            <table width="100%" style="background: #000000 !important; background-color: #000000 !important;" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td style="padding: 32px 40px; background: #000000 !important; background-color: #000000 !important;">
+                        
+                        <!-- Greeting -->
+                        <font color="#ffffff" style="color: #ffffff !important; font-size: 24px !important; font-weight: 500 !important; font-family: 'Rethink Sans', Arial, sans-serif !important; margin-bottom: 32px !important; display: block;">
+                            Bonjour {{ contact.FIRST_NAME | default:"" }},
+                        </font>
+                        
+                        <br>
+                        
+                        <!-- Intro -->
+                        <font color="#ffffff" style="color: #ffffff !important; font-size: 18px !important; font-weight: 300 !important; font-family: 'Rethink Sans', Arial, sans-serif !important; line-height: 1.5; margin-bottom: 40px !important; display: block;">
+                            Votre campagne ne peut pas démarrer : il manque votre CV pour accéder aux +200 recruteurs partenaires.{% if contact.SCHOOL %} En tant qu'étudiant à {{ contact.SCHOOL }}, vous bénéficiez d'un accès privilégié à notre réseau de recruteurs partenaires.{% endif %}
+                        </font>
+                        
+                        <br><br>
+                        
+                        <!-- CTA Principal - Design premium -->
+                        <table style="margin: 24px auto 48px auto; background: linear-gradient(135deg, #e498fc 0%, #f53c4c 50%, #6e2fde 100%) !important; background-color: #e498fc !important; border-radius: 8px !important; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3) !important;" cellpadding="0" cellspacing="0">
+                            <tr>
+                                <td style="padding: 18px 36px; text-align: center;">
+                                    <a href="https://kandi.jobs/formulaire/step-2?email={{ contact.EMAIL }}&tel={{ contact.SMS }}&prenom={{ contact.FIRST_NAME }}&nom={{ contact.LAST_NAME }}&gender={{ contact.GENDER | default:"" }}" style="color: #ffffff !important; text-decoration: none !important; font-family: 'Rethink Sans', Arial, sans-serif !important; font-size: 18px !important; font-weight: 700 !important;">
+                                        <font color="#ffffff" style="color: #ffffff !important; font-weight: 700 !important;">
+                                            Télécharger mon CV maintenant
+                                        </font>
+                                    </a>
+                                </td>
+                            </tr>
+                        </table>
+                        
+                        <!-- Urgency Box - Version table simple -->
+                        <table width="100%" class="no-invert" style="margin: 32px 0; background: #000000 !important; background-color: #000000 !important; border: 2px solid #333333 !important; border-radius: 12px;" cellpadding="0" cellspacing="0" bgcolor="#000000">
+                            <tr>
+                                <td class="no-invert" style="padding: 24px; text-align: center; background: #000000 !important; background-color: #000000 !important; color: #ffffff !important;" bgcolor="#000000">
+                                    <font color="#ffffff" style="color: #ffffff !important; font-size: 18px !important; font-weight: 500 !important; font-family: 'Rethink Sans', Arial, sans-serif !important; text-decoration: none !important; background-color: transparent !important;">
+                                        ⏰ Actuellement, votre dossier est invisible
+                                    </font>
+                                    <br><br>
+                                    <font color="#ffffff" style="color: #ffffff !important; font-size: 16px !important; font-weight: 300 !important; font-family: 'Rethink Sans', Arial, sans-serif !important; text-decoration: none !important; background-color: transparent !important;">
+                                        Sans CV, nos recruteurs ne peuvent pas évaluer votre candidature ni vous proposer d'opportunités.
+                                    </font>
+                                </td>
+                            </tr>
+                        </table>
+                        
+                        <!-- Section Title -->
+                        <font color="#ffffff" style="color: #ffffff !important; font-size: 20px !important; font-weight: 500 !important; font-family: 'Rethink Sans', Arial, sans-serif !important; margin: 40px 0 20px 0; display: block;">
+                            Ce qui se passe sans votre CV :
+                        </font>
+                        
+                        <!-- Feature négatives - Design premium simplifié -->
+                        <table width="100%" class="no-invert feature-item" style="margin: 16px 0; background: #1a0a0a !important; background-color: #1a0a0a !important; border: 1px solid #333333; border-radius: 8px;" cellpadding="0" cellspacing="0" bgcolor="#1a0a0a">
+                            <tr>
+                                <td class="no-invert" style="padding: 20px; background: #1a0a0a !important; background-color: #1a0a0a !important; color: #ffffff !important;" bgcolor="#1a0a0a">
+                                    <font color="#ffffff" style="color: #ffffff !important; font-family: 'Rethink Sans', Arial, sans-serif !important; font-size: 16px !important; font-weight: 300 !important; text-decoration: none !important; background-color: transparent !important;">
+                                        ❌ Votre profil reste masqué dans notre base de talents
+                                    </font>
+                                </td>
+                            </tr>
+                        </table>
+                        
+                        <table width="100%" class="no-invert feature-item" style="margin: 16px 0; background: #1a0a0a !important; background-color: #1a0a0a !important; border: 1px solid #333333; border-radius: 8px;" cellpadding="0" cellspacing="0" bgcolor="#1a0a0a">
+                            <tr>
+                                <td class="no-invert" style="padding: 20px; background: #1a0a0a !important; background-color: #1a0a0a !important; color: #ffffff !important;" bgcolor="#1a0a0a">
+                                    <font color="#ffffff" style="color: #ffffff !important; font-family: 'Rethink Sans', Arial, sans-serif !important; font-size: 16px !important; font-weight: 300 !important; text-decoration: none !important; background-color: transparent !important;">
+                                        ❌ Aucun recruteur ne peut évaluer vos compétences
+                                    </font>
+                                </td>
+                            </tr>
+                        </table>
+                        
+                        <table width="100%" class="no-invert feature-item" style="margin: 16px 0; background: #1a0a0a !important; background-color: #1a0a0a !important; border: 1px solid #333333; border-radius: 8px;" cellpadding="0" cellspacing="0" bgcolor="#1a0a0a">
+                            <tr>
+                                <td class="no-invert" style="padding: 20px; background: #1a0a0a !important; background-color: #1a0a0a !important; color: #ffffff !important;" bgcolor="#1a0a0a">
+                                    <font color="#ffffff" style="color: #ffffff !important; font-family: 'Rethink Sans', Arial, sans-serif !important; font-size: 16px !important; font-weight: 300 !important; text-decoration: none !important; background-color: transparent !important;">
+                                        ❌ Votre automatisation de candidatures ne peut pas se lancer
+                                    </font>
+                                </td>
+                            </tr>
+                        </table>
+                        
+                        <table width="100%" class="no-invert feature-item" style="margin: 16px 0; background: #1a0a0a !important; background-color: #1a0a0a !important; border: 1px solid #333333; border-radius: 8px;" cellpadding="0" cellspacing="0" bgcolor="#1a0a0a">
+                            <tr>
+                                <td class="no-invert" style="padding: 20px; background: #1a0a0a !important; background-color: #1a0a0a !important; color: #ffffff !important;" bgcolor="#1a0a0a">
+                                    <font color="#ffffff" style="color: #ffffff !important; font-family: 'Rethink Sans', Arial, sans-serif !important; font-size: 16px !important; font-weight: 300 !important; text-decoration: none !important; background-color: transparent !important;">
+                                        ❌ Vous passez à côté des offres du marché caché (70% de nos placements)
+                                    </font>
+                                </td>
+                            </tr>
+                        </table>
+                        
+                        <br>
+                        
+                        <!-- Section Title -->
+                        <font color="#ffffff" style="color: #ffffff !important; font-size: 20px !important; font-weight: 500 !important; font-family: 'Rethink Sans', Arial, sans-serif !important; margin: 40px 0 20px 0; display: block;">
+                            Ce qui se débloque dès l'ajout de votre CV :
+                        </font>
+                        
+                        <!-- Features positives - Design premium -->
+                        <table width="100%" style="margin: 16px 0; background: #0a1a0a !important; background-color: #0a1a0a !important; border: 1px solid #333333; border-radius: 8px;" cellpadding="0" cellspacing="0">
+                            <tr>
+                                <td style="padding: 20px; background: #0a1a0a !important; background-color: #0a1a0a !important;">
+                                    <font color="#ffffff" style="color: #ffffff !important; font-family: 'Rethink Sans', Arial, sans-serif !important; font-size: 16px !important; font-weight: 300 !important;">
+                                        🚀 Lancement immédiat de votre campagne automatisée
+                                    </font>
+                                </td>
+                            </tr>
+                        </table>
+                        
+                        <table width="100%" style="margin: 16px 0; background: #0a1a0a !important; background-color: #0a1a0a !important; border: 1px solid #333333; border-radius: 8px;" cellpadding="0" cellspacing="0">
+                            <tr>
+                                <td style="padding: 20px; background: #0a1a0a !important; background-color: #0a1a0a !important;">
+                                    <font color="#ffffff" style="color: #ffffff !important; font-family: 'Rethink Sans', Arial, sans-serif !important; font-size: 16px !important; font-weight: 300 !important;">
+                                        👥 Visibilité auprès de +200 recruteurs actifs
+                                    </font>
+                                </td>
+                            </tr>
+                        </table>
+                        
+                        <table width="100%" style="margin: 16px 0; background: #0a1a0a !important; background-color: #0a1a0a !important; border: 1px solid #333333; border-radius: 8px;" cellpadding="0" cellspacing="0">
+                            <tr>
+                                <td style="padding: 20px; background: #0a1a0a !important; background-color: #0a1a0a !important;">
+                                    <font color="#ffffff" style="color: #ffffff !important; font-family: 'Rethink Sans', Arial, sans-serif !important; font-size: 16px !important; font-weight: 300 !important;">
+                                        🎯 Matching intelligent avec les postes qui vous correspondent
+                                    </font>
+                                </td>
+                            </tr>
+                        </table>
+                        
+                        <table width="100%" style="margin: 16px 0; background: #0a1a0a !important; background-color: #0a1a0a !important; border: 1px solid #333333; border-radius: 8px;" cellpadding="0" cellspacing="0">
+                            <tr>
+                                <td style="padding: 20px; background: #0a1a0a !important; background-color: #0a1a0a !important;">
+                                    <font color="#ffffff" style="color: #ffffff !important; font-family: 'Rethink Sans', Arial, sans-serif !important; font-size: 16px !important; font-weight: 300 !important;">
+                                        📧 Candidatures personnalisées générées par IA
+                                    </font>
+                                </td>
+                            </tr>
+                        </table>
+                        
+                        <table width="100%" style="margin: 16px 0; background: #0a1a0a !important; background-color: #0a1a0a !important; border: 1px solid #333333; border-radius: 8px;" cellpadding="0" cellspacing="0">
+                            <tr>
+                                <td style="padding: 20px; background: #0a1a0a !important; background-color: #0a1a0a !important;">
+                                    <font color="#ffffff" style="color: #ffffff !important; font-family: 'Rethink Sans', Arial, sans-serif !important; font-size: 16px !important; font-weight: 300 !important;">
+                                        📈 Objectif : 4 entretiens garantis dans la semaine
+                                    </font>
+                                </td>
+                            </tr>
+                        </table>
+                        
+                        <br>
+                        
+                        <!-- Highlight Box -->
+                        <table width="100%" style="margin: 32px 0; background: #111111 !important; background-color: #111111 !important; border: 1px solid #333333; border-radius: 12px;" cellpadding="0" cellspacing="0">
+                            <tr>
+                                <td style="padding: 32px; text-align: center; background: #111111 !important; background-color: #111111 !important;">
+                                    <font color="#ffffff" style="color: #ffffff !important; font-size: 18px !important; font-weight: 500 !important; font-family: 'Rethink Sans', Arial, sans-serif !important;">
+                                        Il suffit de 2 minutes
+                                    </font>
+                                    <font color="#ffffff" style="color: #ffffff !important; font-size: 18px !important; font-weight: 300 !important; font-family: 'Rethink Sans', Arial, sans-serif !important;">
+                                        pour télécharger votre CV et activer définitivement votre campagne automatisée.
+                                    </font>
+                                </td>
+                            </tr>
+                        </table>
+                        
+                        <!-- CTA Secondaire -->
+                        <table style="margin: 48px auto; background: linear-gradient(135deg, #e498fc 0%, #f53c4c 50%, #6e2fde 100%) !important; background-color: #e498fc !important; border-radius: 8px !important; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3) !important;" cellpadding="0" cellspacing="0">
+                            <tr>
+                                <td style="padding: 18px 36px; text-align: center;">
+                                    <a href="https://kandi.jobs/formulaire/step-2?email={{ contact.EMAIL }}&tel={{ contact.SMS }}&prenom={{ contact.FIRST_NAME }}&nom={{ contact.LAST_NAME }}&gender={{ contact.GENDER | default:"" }}" style="color: #ffffff !important; text-decoration: none !important; font-family: 'Rethink Sans', Arial, sans-serif !important; font-size: 18px !important; font-weight: 700 !important;">
+                                        <font color="#ffffff" style="color: #ffffff !important; font-weight: 700 !important;">
+                                            Activer ma campagne maintenant
+                                        </font>
+                                    </a>
+                                </td>
+                            </tr>
+                        </table>
+                        
+                        <!-- Conseil box -->
+                        <table width="100%" style="margin: 32px 0; background: rgba(255, 255, 255, 0.05) !important; border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 8px;" cellpadding="0" cellspacing="0">
+                            <tr>
+                                <td style="padding: 20px;">
+                                    <font color="#ffffff" style="color: #ffffff !important; font-size: 14px !important; font-weight: 500 !important; font-family: 'Rethink Sans', Arial, sans-serif !important;">
+                                        💡 Conseil :
+                                    </font>
+                                    <font color="#ffffff" style="color: #ffffff !important; font-size: 14px !important; font-weight: 300 !important; font-family: 'Rethink Sans', Arial, sans-serif !important;">
+                                        Plus votre CV est à jour et détaillé, plus notre IA pourra générer des candidatures personnalisées et pertinentes pour maximiser vos chances d'obtenir des entretiens dans tous secteurs.
+                                    </font>
+                                </td>
+                            </tr>
+                        </table>
+                        
+                    </td>
+                </tr>
+            </table>
+            
+        </div>
+        
+        <!-- Footer avec background premium -->
+        <table width="100%" style="background-image: url('https://i.imgur.com/3Dg1zxQ.jpeg'); background-size: cover; background-position: center; background-color: #000000 !important;" cellpadding="0" cellspacing="0">
+            <tr>
+                <td style="padding: 0;">
+                    <table style="max-width: 600px; margin: 0 auto;" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td style="padding: 48px 32px; text-align: center;">
+                                <table style="background: rgba(0, 0, 0, 0.8) !important; backdrop-filter: blur(12px); border-radius: 16px; border: 1px solid rgba(255, 255, 255, 0.1); width: 100%;" cellpadding="0" cellspacing="0">
+                                    <tr>
+                                        <td style="padding: 32px 24px; text-align: center;">
+                                            <font color="#ffffff" style="color: #ffffff !important; font-size: 14px !important; font-family: 'Rethink Sans', Arial, sans-serif !important; font-style: italic; margin-bottom: 16px; display: block;">
+                                                Cet email a été envoyé automatiquement car votre campagne Kandi ne peut pas démarrer sans CV
+                                            </font>
+                                            <br>
+                                            <font color="#ffffff" style="color: #ffffff !important; font-size: 14px !important; font-family: 'Rethink Sans', Arial, sans-serif !important;">
+                                                Besoin d'aide ? Notre équipe répond sous 2h : 
+                                                <a href="mailto:contact@kandi.jobs" style="color: #ffffff !important; text-decoration: none;">contact@kandi.jobs</a>
+                                            </font>
+                                            <br><br>
+                                            <font color="#ffffff" style="color: #ffffff !important; font-size: 12px !important; font-family: 'Rethink Sans', Arial, sans-serif !important;">
+                                                <a href="{{ unsubscribe }}" style="color: #ffffff !important; text-decoration: none;">Se désabonner</a> | 
+                                                <a href="https://kandi.jobs" style="color: #ffffff !important; text-decoration: none;">kandi.jobs</a>
+                                            </font>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        
+    </div>
+    
+</body>
+</html>

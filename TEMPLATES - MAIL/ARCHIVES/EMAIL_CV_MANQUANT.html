@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light dark">
+    <meta name="supported-color-schemes" content="light dark">
+    <title>Votre CV manque pour démarrer votre campagne Kandi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rethink+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700&display=swap" rel="stylesheet">
+    <!--[if mso]>
+    <noscript>
+        <xml>
+            <o:OfficeDocumentSettings>
+                <o:PixelsPerInch>96</o:PixelsPerInch>
+            </o:OfficeDocumentSettings>
+        </xml>
+    </noscript>
+    <![endif]-->
+    <style>
+        /* Reset styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body, table, td, p, a, li, blockquote, div, span, strong {
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+            font-family: 'Rethink Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif !important;
+            color: #ffffff !important;
+        }
+        
+        table, td {
+            mso-table-lspace: 0pt;
+            mso-table-rspace: 0pt;
+        }
+        
+        img {
+            -ms-interpolation-mode: bicubic;
+            border: 0 !important;
+            height: auto;
+            line-height: 100%;
+            outline: none;
+            text-decoration: none;
+            display: block;
+            max-width: 100%;
+        }
+
+        /* Protection contre l'inversion automatique */
+        @media (prefers-color-scheme: dark) {
+          .email-wrapper, .email-container, .header, .content, .footer-wrapper,
+          body, div, p, span, h1, h2, h3, h4, h5, h6, li, a {
+            background-color: #000000 !important;
+            color: #ffffff !important;
+          }
+          
+          .email-container {
+            background: #000000 !important;
+          }
+        }
+
+        /* Protection spécifique Gmail */
+        [data-ogsc] .email-wrapper, [data-ogsc] .email-container, [data-ogsc] body,
+        [data-ogsc] div, [data-ogsc] p, [data-ogsc] span, [data-ogsc] h1,
+        [data-ogsc] h2, [data-ogsc] h3, [data-ogsc] li, [data-ogsc] a {
+          background-color: #000000 !important;
+          color: #ffffff !important;
+        }
+
+        /* Force les couleurs sur tous les éléments */
+        * {
+          color: #ffffff !important;
+          background-color: inherit !important;
+        }
+
+        /* Protection spécifique pour les éléments de liste */
+        .feature-item * {
+          color: #ffffff !important;
+        }
+
+        .feature-item .feature-text {
+          color: #ffffff !important;
+        }
+
+        /* Forçage spécifique pour les clients problématiques */
+        [data-ogsc] .feature-text,
+        [data-ogsc] .greeting,
+        [data-ogsc] .intro,
+        [data-ogsc] .section-title,
+        [data-ogsc] .highlight-text {
+          color: #ffffff !important;
+          background-color: transparent !important;
+        }
+
+        /* Anti-surlignage texte GLOBAL - SUPER AGRESSIF */
+        *, *::before, *::after, span, strong, em, b, i, small, p, div, h1, h2, h3, h4, h5, h6,
+        .urgency-box, .urgency-box *, .urgency-box span, .urgency-box strong, .urgency-box p,
+        .highlight-box, .highlight-box *, .highlight-box span, .highlight-box strong, .highlight-box p,
+        .feature-item, .feature-item *, .feature-item span, .feature-item strong, .feature-item p {
+            text-shadow: none !important;
+            -webkit-text-shadow: none !important;
+            -moz-text-shadow: none !important;
+            text-decoration: none !important;
+            text-decoration-color: transparent !important;
+            text-decoration-line: none !important;
+            text-decoration-style: none !important;
+            text-decoration-thickness: 0 !important;
+            box-shadow: none !important;
+            -webkit-text-stroke: 0 !important;
+            -webkit-text-stroke-width: 0 !important;
+            -webkit-text-stroke-color: transparent !important;
+            text-stroke: 0 !important;
+            text-outline: none !important;
+            outline: none !important;
+            border: none !important;
+            text-emphasis: none !important;
+            text-emphasis-color: transparent !important;
+            filter: none !important;
+            -webkit-filter: none !important;
+        }
+
+        /* Force spécifique pour urgency-box */
+        .urgency-box .highlight-text,
+        .urgency-box .highlight-text *,
+        .urgency-box p,
+        .urgency-box p *,
+        .urgency-box span,
+        .urgency-box strong,
+        .urgency-box br {
+            color: #ffffff !important;
+            background: transparent !important;
+            background-color: transparent !important;
+            text-shadow: none !important;
+            -webkit-text-shadow: none !important;
+            border: none !important;
+            outline: none !important;
+        }
+
+        /* Base styles */
+        body {
+            margin: 0 !important;
+            padding: 0 !important;
+            background: linear-gradient(135deg, #000000 0%, #333333 100%) !important;
+            background-color: #000000 !important;
+            font-family: 'Rethink Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif !important;
+            font-weight: 300 !important;
+            width: 100%;
+            color: #ffffff !important;
+        }
+        
+        .email-wrapper {
+            width: 100% !important;
+            background: linear-gradient(135deg, #000000 0%, #333333 100%) !important;
+            background-color: #000000 !important;
+            padding: 20px 0 !important;
+            min-height: 100vh !important;
+        }
+        
+        .email-container {
+            max-width: 600px !important;
+            margin: 0 auto !important;
+            background-color: #000000 !important;
+            box-shadow: 0 0 40px rgba(0, 0, 0, 0.8) !important;
+            border-radius: 12px !important;
+            overflow: hidden !important;
+        }
+        
+        .header {
+            background-color: #000000 !important;
+            padding: 40px 32px 32px 32px !important;
+            text-align: center;
+            position: relative;
+        }
+        
+        .logo-container {
+            display: inline-block;
+            text-align: center;
+            margin-bottom: 0px;
+        }
+        
+        .logo-img {
+            max-width: 180px !important;
+            height: auto !important;
+            display: block !important;
+            margin: 0 auto !important;
+        }
+        
+        .logo-fallback {
+            display: block;
+            font-family: 'Rethink Sans', Arial, sans-serif !important;
+            font-weight: 700 !important;
+            font-size: 42px !important;
+            color: #ffffff !important;
+            letter-spacing: -0.02em;
+            text-decoration: none !important;
+            margin: 0 auto;
+        }
+        
+        .logo-k {
+            background: linear-gradient(135deg, #e498fc 0%, #f53c4c 50%, #6e2fde 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-right: 2px;
+            color: #e498fc !important;
+        }
+        
+        .logo-text {
+            color: #ffffff !important;
+        }
+        
+        .content {
+            padding: 32px 40px !important;
+            color: #ffffff !important;
+            line-height: 1.6;
+            background-color: #000000 !important;
+            font-weight: 300 !important;
+            font-family: 'Rethink Sans', Arial, sans-serif !important;
+        }
+        
+        .greeting {
+            font-size: 24px !important;
+            font-weight: 500 !important;
+            margin-bottom: 32px !important;
+            color: #ffffff !important;
+            font-family: 'Rethink Sans', Arial, sans-serif !important;
+        }
+        
+        .intro {
+            font-size: 18px !important;
+            margin-bottom: 40px !important;
+            color: #ffffff !important;
+            line-height: 1.5;
+            font-weight: 300 !important;
+            font-family: 'Rethink Sans', Arial, sans-serif !important;
+        }
+        
+        .section-title {
+            font-size: 20px !important;
+            font-weight: 500 !important;
+            margin: 40px 0 20px 0 !important;
+            color: #ffffff !important;
+            font-family: 'Rethink Sans', Arial, sans-serif !important;
+        }
+        
+        .feature-list {
+            margin: 20px 0 !important;
+            padding: 0 !important;
+            list-style: none !important;
+        }
+        
+        .feature-item {
+            margin: 16px 0 !important;
+            padding: 20px !important;
+            list-style: none !important;
+            font-size: 16px !important;
+            font-weight: 300 !important;
+            line-height: 1.5;
+            border-radius: 8px !important;
+            font-family: 'Rethink Sans', Arial, sans-serif !important;
+            color: #ffffff !important;
+            display: flex !important;
+            align-items: center !important;
+        }
+        
+        .feature-icon {
+            display: inline-block !important;
+            width: 20px !important;
+            height: 20px !important;
+            margin-right: 12px !important;
+            text-align: center !important;
+            font-size: 16px !important;
+            line-height: 20px !important;
+            vertical-align: middle !important;
+            flex-shrink: 0 !important;
+        }
+        
+        .feature-text {
+            flex: 1 !important;
+            margin: 0 !important;
+            color: #ffffff !important;
+        }
+        
+        .negative {
+            background-color: rgba(239, 68, 68, 0.1) !important;
+            border: 1px solid rgba(239, 68, 68, 0.2) !important;
+        }
+        
+        .negative .feature-icon {
+            color: #fca5a5 !important;
+        }
+
+        .negative .feature-text {
+            color: #ffffff !important;
+        }
+        
+        .positive {
+            background-color: rgba(16, 185, 129, 0.1) !important;
+            border: 1px solid rgba(16, 185, 129, 0.2) !important;
+        }
+        
+        .positive .feature-icon {
+            color: #86efac !important;
+        }
+
+        .positive .feature-text {
+            color: #ffffff !important;
+        }
+        
+        .warning {
+            background-color: rgba(251, 191, 36, 0.1) !important;
+            border: 1px solid rgba(251, 191, 36, 0.2) !important;
+        }
+        
+        .warning .feature-icon {
+            color: #fde047 !important;
+        }
+
+        .warning .feature-text {
+            color: #ffffff !important;
+        }
+        
+        .highlight-box {
+            background: linear-gradient(135deg, #111111 0%, #1a1a1a 100%) !important;
+            background-color: #111111 !important;
+            border: 1px solid #333333 !important;
+            border-radius: 12px !important;
+            padding: 32px !important;
+            margin: 32px 0 !important;
+            text-align: center;
+        }
+        
+        .highlight-text {
+            font-size: 18px !important;
+            color: #ffffff !important;
+            margin: 0 !important;
+            font-weight: 300 !important;
+            font-family: 'Rethink Sans', Arial, sans-serif !important;
+        }
+        
+        .urgency-box {
+            background: linear-gradient(135deg, rgba(239, 68, 68, 0.15) 0%, rgba(239, 68, 68, 0.05) 100%) !important;
+            background-color: rgba(239, 68, 68, 0.1) !important;
+            border: 2px solid rgba(239, 68, 68, 0.3) !important;
+            border-radius: 12px !important;
+            padding: 24px !important;
+            margin: 32px 0 !important;
+            text-align: center;
+        }
+        
+        .cta-section {
+            text-align: center;
+            margin: 48px 0 !important;
+        }
+        
+        .cta-button {
+            display: inline-block !important;
+            background: linear-gradient(135deg, #e498fc 0%, #f53c4c 50%, #6e2fde 100%) !important;
+            background-color: #e498fc !important;
+            color: #ffffff !important;
+            padding: 18px 36px !important;
+            text-decoration: none !important;
+            border-radius: 8px !important;
+            font-weight: 700 !important;
+            font-size: 18px !important;
+            margin: 16px 0 !important;
+            border: 0 !important;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3) !important;
+            font-family: 'Rethink Sans', Arial, sans-serif !important;
+            text-align: center !important;
+        }
+        
+        .cta-button:hover {
+            background: linear-gradient(135deg, #d084f2 0%, #e83040 50%, #5a26c4 100%) !important;
+            background-color: #d084f2 !important;
+            color: #ffffff !important;
+        }
+
+        .cta-button, .cta-button:visited, .cta-button:active, .cta-button span {
+            color: #ffffff !important;
+            text-decoration: none !important;
+            font-weight: 700 !important;
+        }
+        
+        .footer-wrapper {
+            width: 100% !important;
+            background-image: url('https://i.imgur.com/3Dg1zxQ.jpeg') !important;
+            background-color: #000000 !important;
+            background-size: cover !important;
+            background-position: center !important;
+            background-repeat: no-repeat !important;
+            margin-top: 0 !important;
+            position: relative;
+        }
+        
+        .footer {
+            max-width: 600px !important;
+            margin: 0 auto !important;
+            padding: 48px 32px !important;
+            font-size: 14px !important;
+            color: #ffffff !important;
+            text-align: center;
+            font-weight: 300 !important;
+            font-family: 'Rethink Sans', Arial, sans-serif !important;
+            position: relative;
+        }
+        
+        .footer-content {
+            background: rgba(0, 0, 0, 0.4) !important;
+            background-color: rgba(0, 0, 0, 0.7) !important;
+            backdrop-filter: blur(12px) !important;
+            -webkit-backdrop-filter: blur(12px) !important;
+            border-radius: 16px !important;
+            padding: 32px 24px !important;
+            border: 1px solid rgba(255, 255, 255, 0.1) !important;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3) !important;
+        }
+        
+        .footer-content p {
+            margin: 0 0 16px 0 !important;
+            font-family: 'Rethink Sans', Arial, sans-serif !important;
+            color: #ffffff !important;
+        }
+        
+        .footer-content a {
+            color: #ffffff !important;
+            text-decoration: none !important;
+            font-family: 'Rethink Sans', Arial, sans-serif !important;
+        }
+        
+        @supports not (backdrop-filter: blur(12px)) {
+            .footer-content {
+                background: rgba(0, 0, 0, 0.7) !important;
+            }
+        }
+        
+        /* Mobile responsive */
+        @media only screen and (max-width: 600px) {
+            /* Force dark mode sur mobile */
+            body, .email-wrapper, .email-container, .header, .content, .footer-wrapper,
+            div, p, span, h1, h2, h3, h4, h5, h6, li, a,
+            .greeting, .intro, .section-title, .highlight-text, .feature-text {
+                background-color: #000000 !important;
+                color: #ffffff !important;
+            }
+
+            /* Protection spécifique Gmail mobile */
+            [data-ogsc] body, [data-ogsc] .email-wrapper, [data-ogsc] .email-container,
+            [data-ogsc] .header, [data-ogsc] .content, [data-ogsc] .footer-wrapper,
+            [data-ogsc] div, [data-ogsc] p, [data-ogsc] span, [data-ogsc] h1,
+            [data-ogsc] h2, [data-ogsc] h3, [data-ogsc] li, [data-ogsc] a,
+            [data-ogsc] .greeting, [data-ogsc] .intro, [data-ogsc] .section-title,
+            [data-ogsc] .highlight-text, [data-ogsc] .feature-text {
+                background-color: #000000 !important;
+                color: #ffffff !important;
+            }
+
+            /* Structure mobile */
+            .email-wrapper {
+                width: 100% !important;
+                padding: 10px 0 !important;
+                background: linear-gradient(135deg, #000000 0%, #333333 100%) !important;
+                background-color: #000000 !important;
+                min-height: 100vh !important;
+            }
+            
+            .email-container {
+                max-width: 100% !important;
+                margin: 0 10px !important;
+                border-radius: 8px 8px 0 0 !important;
+                background-color: #000000 !important;
+                overflow: hidden !important;
+            }
+            
+            .content {
+                padding: 24px 20px !important;
+                background-color: #000000 !important;
+                color: #ffffff !important;
+            }
+            
+            .header {
+                padding: 32px 20px 24px 20px !important;
+                background-color: #000000 !important;
+                text-align: center;
+            }
+            
+            .logo-img {
+                max-width: 140px !important;
+                height: auto !important;
+                display: block !important;
+                margin: 0 auto !important;
+            }
+            
+            .logo-fallback {
+                font-size: 32px !important;
+                color: #ffffff !important;
+                text-align: center;
+            }
+            
+            .greeting {
+                font-size: 22px !important;
+                color: #ffffff !important;
+                margin-bottom: 24px !important;
+                text-align: left;
+            }
+
+            .intro {
+                font-size: 16px !important;
+                color: #ffffff !important;
+                margin-bottom: 32px !important;
+                line-height: 1.5;
+            }
+            
+            .section-title {
+                font-size: 18px !important;
+                color: #ffffff !important;
+                margin: 32px 0 16px 0 !important;
+            }
+
+            .feature-list {
+                margin: 16px 0 !important;
+                padding: 0 !important;
+            }
+            
+            .feature-item {
+                margin: 12px 0 !important;
+                padding: 16px !important;
+                font-size: 14px !important;
+                flex-direction: row !important;
+                align-items: flex-start !important;
+                border-radius: 8px !important;
+                color: #ffffff !important;
+                line-height: 1.4;
+            }
+
+            .feature-item.negative {
+                background: #1a0a0a !important;
+                background-color: #1a0a0a !important;
+                border: 1px solid #333333 !important;
+            }
+
+            .feature-item.positive {
+                background: #0a1a0a !important;
+                background-color: #0a1a0a !important;
+                border: 1px solid #333333 !important;
+            }
+
+            .feature-item.warning {
+                background: #1a1a0a !important;
+                background-color: #1a1a0a !important;
+                border: 1px solid #333333 !important;
+            }
+
+            .feature-item .feature-text, .feature-item *, .feature-item span {
+                color: #ffffff !important;
+                background: transparent !important;
+                background-color: transparent !important;
+            }
+
+            /* Force absolue sur les icônes de feature */
+            .feature-item .feature-icon {
+                background: transparent !important;
+                background-color: transparent !important;
+                color: #ffffff !important;
+            }
+
+            .feature-item.negative .feature-icon {
+                color: #fca5a5 !important;
+            }
+
+            .feature-item.positive .feature-icon {
+                color: #86efac !important;
+            }
+
+            .feature-item.warning .feature-icon {
+                color: #fde047 !important;
+            }
+
+            .feature-icon {
+                margin-top: 0px !important;
+                margin-right: 12px !important;
+                width: 18px !important;
+                height: 18px !important;
+                font-size: 14px !important;
+                flex-shrink: 0 !important;
+            }
+            
+            .cta-section {
+                text-align: center;
+                margin: 32px 0 !important;
+                padding: 0 10px;
+            }
+
+            .cta-button {
+                padding: 18px 24px !important;
+                font-size: 16px !important;
+                width: 100% !important;
+                max-width: 300px !important;
+                display: block !important;
+                margin: 16px auto !important;
+                background: linear-gradient(135deg, #e498fc 0%, #f53c4c 50%, #6e2fde 100%) !important;
+                background-color: #e498fc !important;
+                color: #ffffff !important;
+                text-decoration: none !important;
+                border-radius: 8px !important;
+                font-weight: 700 !important;
+                box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3) !important;
+            }
+
+            .cta-button span {
+                color: #ffffff !important;
+                font-weight: 700 !important;
+            }
+            
+            .highlight-box {
+                padding: 20px !important;
+                margin: 24px 0 !important;
+                background: #111111 !important;
+                background-color: #111111 !important;
+                border: 1px solid #333333 !important;
+                border-radius: 12px !important;
+                text-align: center;
+            }
+
+            .urgency-box {
+                padding: 20px !important;
+                margin: 24px 0 !important;
+                background: #1a0a0a !important;
+                background-color: #1a0a0a !important;
+                border: 2px solid #333333 !important;
+                border-radius: 12px !important;
+                text-align: center;
+            }
+
+            .highlight-text {
+                color: #ffffff !important;
+                background: transparent !important;
+                background-color: transparent !important;
+                font-size: 16px !important;
+                line-height: 1.4;
+            }
+
+            .highlight-box *, .urgency-box * {
+                color: #ffffff !important;
+                background: transparent !important;
+                background-color: transparent !important;
+            }
+            
+            .footer-wrapper {
+                width: 100% !important;
+                background-image: url('https://i.imgur.com/3Dg1zxQ.jpeg') !important;
+                background-color: #000000 !important;
+                background-size: cover !important;
+                background-position: center !important;
+            }
+
+            .footer {
+                padding: 32px 20px !important;
+                max-width: 100% !important;
+                margin: 0 auto !important;
+            }
+            
+            .footer-content {
+                padding: 24px 20px !important;
+                border-radius: 12px !important;
+                background: rgba(0, 0, 0, 0.8) !important;
+                background-color: rgba(0, 0, 0, 0.8) !important;
+                backdrop-filter: blur(12px) !important;
+                border: 1px solid rgba(255, 255, 255, 0.1) !important;
+            }
+
+            .footer-content p, .footer-content a {
+                color: #ffffff !important;
+                font-size: 14px !important;
+            }
+
+            /* Forces supplémentaires pour les textes mobiles */
+            * {
+                color: #ffffff !important;
+            }
+
+            /* Anti-surlignage TEXTE mobile - ULTRA AGRESSIF */
+            *, *::before, *::after, span, strong, em, b, i, small, p, div, h1, h2, h3, h4, h5, h6,
+            .feature-item, .feature-item *, .feature-item span, .feature-item strong, .feature-text,
+            .highlight-box, .highlight-box *, .highlight-box span, .highlight-box strong, .highlight-text,
+            .urgency-box, .urgency-box *, .urgency-box span, .urgency-box strong, .urgency-box p, .urgency-box .highlight-text,
+            .greeting, .greeting *, .intro, .intro *, .section-title, .section-title * {
+                color: #ffffff !important;
+                background: transparent !important;
+                background-color: transparent !important;
+                text-shadow: none !important;
+                -webkit-text-shadow: none !important;
+                -moz-text-shadow: none !important;
+                text-decoration: none !important;
+                text-decoration-color: transparent !important;
+                text-decoration-line: none !important;
+                text-decoration-style: none !important;
+                text-decoration-thickness: 0 !important;
+                box-shadow: none !important;
+                -webkit-text-stroke: 0 !important;
+                -webkit-text-stroke-width: 0 !important;
+                -webkit-text-stroke-color: transparent !important;
+                text-stroke: 0 !important;
+                text-outline: none !important;
+                outline: none !important;
+                border: none !important;
+                text-emphasis: none !important;
+                text-emphasis-color: transparent !important;
+                filter: none !important;
+                -webkit-filter: none !important;
+                -webkit-text-size-adjust: 100% !important;
+                -ms-text-size-adjust: 100% !important;
+            }
+
+            /* Spécial pour la boîte d'urgence mobile */
+            .urgency-box {
+                background: #000000 !important;
+                background-color: #000000 !important;
+                border: 2px solid #333333 !important;
+            }
+
+            .urgency-box * {
+                color: #ffffff !important;
+                background: transparent !important;
+                background-color: transparent !important;
+            }
+
+            /* Protection absolue dark mode mobile */
+            @media (prefers-color-scheme: dark) {
+                body, .email-wrapper, .email-container, .header, .content, .footer-wrapper,
+                div, p, span, h1, h2, h3, h4, h5, h6, li, a,
+                .greeting, .intro, .section-title, .highlight-text, .feature-text {
+                    background-color: #000000 !important;
+                    color: #ffffff !important;
+                }
+            }
+        }
+    </style>
+</head>
+<body style="margin: 0 !important; padding: 0 !important; background: linear-gradient(135deg, #000000 0%, #333333 100%) !important; background-color: #000000 !important; font-family: 'Rethink Sans', Arial, sans-serif !important; color: #ffffff !important; -webkit-text-size-adjust: 100% !important; -ms-text-size-adjust: 100% !important;">
+    <div class="email-wrapper" style="width: 100% !important; background: linear-gradient(135deg, #000000 0%, #333333 100%) !important; background-color: #000000 !important; padding: 20px 0 !important; min-height: 100vh !important; color: #ffffff !important;">
+        <div class="email-container" style="max-width: 600px !important; margin: 0 auto !important; background: #000000 !important; background-color: #000000 !important; border-radius: 12px !important; box-shadow: 0 0 40px rgba(0, 0, 0, 0.8) !important; overflow: hidden !important; color: #ffffff !important;">
+            <!-- Header -->
+            <div class="header" style="background-color: #000000 !important; padding: 40px 32px 32px 32px !important; text-align: center;">
+                <a href="https://kandi.jobs" class="logo-container">
+                    <img src="https://i.imgur.com/oocjzXd.png" 
+                         alt="Kandi Logo" 
+                         class="logo-img"
+                         style="display: block; max-width: 180px; height: auto; margin: 0 auto;"
+                         onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <div class="logo-fallback" style="display: none;">
+                        <span class="logo-k">K</span><span class="logo-text">ANDI</span>
+                    </div>
+                </a>
+            </div>
+            
+            <!-- Main Content -->
+            <div class="content" style="padding: 32px 40px !important; background-color: #000000 !important; color: #ffffff !important;">
+                <div class="greeting" style="font-size: 24px !important; font-weight: 500 !important; margin-bottom: 32px !important; color: #ffffff !important;">
+                    Bonjour {{ contact.FIRST_NAME | default:"" }},
+                </div>
+                
+                <div class="intro" style="font-size: 18px !important; margin-bottom: 40px !important; color: #ffffff !important;">
+                    Votre campagne ne peut pas démarrer : il manque votre CV pour accéder aux +200 recruteurs partenaires.{% if contact.SCHOOL %} En tant qu'étudiant à {{ contact.SCHOOL }}, vous bénéficiez d'un accès privilégié à notre réseau de recruteurs partenaires.{% endif %}
+                </div>
+                
+                <div class="cta-section" style="text-align: center; margin: 24px 0 48px 0 !important;">
+                    <a href="https://kandi.jobs/formulaire/step-2?email={{ contact.EMAIL }}&tel={{ contact.SMS }}&prenom={{ contact.FIRST_NAME }}&nom={{ contact.LAST_NAME }}&gender={{ contact.GENDER | default:"" }}" class="cta-button" style="display: inline-block !important; background: linear-gradient(135deg, #e498fc 0%, #f53c4c 50%, #6e2fde 100%) !important; color: #ffffff !important; padding: 18px 36px !important; text-decoration: none !important; border-radius: 8px !important; font-weight: 700 !important; font-size: 18px !important;">
+                        <span style="color: #ffffff !important; font-weight: 700 !important;">Télécharger mon CV maintenant</span>
+                    </a>
+                </div>
+                
+                <table style="width: 100%; margin: 32px 0; background: #000000; border: 2px solid #333333; border-radius: 12px; padding: 0;" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td style="padding: 24px; text-align: center; background: #000000 !important; font-family: Arial, sans-serif !important; font-size: 18px !important; line-height: 1.4 !important; mso-line-height-rule: exactly;">
+                            <font color="#ffffff" style="color: #ffffff !important; text-decoration: none !important;">
+                                🚨 Actuellement votre dossier est invisible
+                            </font>
+                            <br><br>
+                            <font color="#ffffff" style="color: #ffffff !important; text-decoration: none !important;">
+                                Sans CV nos recruteurs ne peuvent pas evaluer votre candidature ni vous proposer d opportunites
+                            </font>
+                        </td>
+                    </tr>
+                </table>
+                
+                <div class="section-title" style="font-size: 20px !important; font-weight: 500 !important; margin: 40px 0 20px 0 !important; color: #ffffff !important;">
+                    Ce qui se passe sans votre CV :
+                </div>
+                
+                <div style="margin: 20px 0;">
+                    <table style="width: 100%; margin: 16px 0; background: #1a0a0a; border: 1px solid #333333; border-radius: 8px;" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td style="padding: 20px; background: #1a0a0a !important; font-family: Arial, sans-serif !important; font-size: 16px !important;">
+                                <font color="#ffffff" style="color: #ffffff !important; text-decoration: none !important;">
+                                    ❌ Votre profil reste masque dans notre base de talents
+                                </font>
+                            </td>
+                        </tr>
+                    </table>
+                    <table style="width: 100%; margin: 16px 0; background: #1a0a0a; border: 1px solid #333333; border-radius: 8px;">
+                        <tr>
+                            <td style="padding: 20px; color: #ffffff; font-family: 'Rethink Sans', Arial, sans-serif; font-size: 16px;">
+                                ❌ Aucun recruteur ne peut évaluer vos compétences
+                            </td>
+                        </tr>
+                    </table>
+                    <table style="width: 100%; margin: 16px 0; background: #1a0a0a; border: 1px solid #333333; border-radius: 8px;">
+                        <tr>
+                            <td style="padding: 20px; color: #ffffff; font-family: 'Rethink Sans', Arial, sans-serif; font-size: 16px;">
+                                ❌ Votre automatisation de candidatures ne peut pas se lancer
+                            </td>
+                        </tr>
+                    </table>
+                    <table style="width: 100%; margin: 16px 0; background: #1a0a0a; border: 1px solid #333333; border-radius: 8px;">
+                        <tr>
+                            <td style="padding: 20px; color: #ffffff; font-family: 'Rethink Sans', Arial, sans-serif; font-size: 16px;">
+                                ❌ Vous passez à côté des offres du marché caché (70% de nos placements)
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                
+                <div class="section-title" style="font-size: 20px !important; font-weight: 500 !important; margin: 40px 0 20px 0 !important; color: #ffffff !important;">
+                    Ce qui se débloque dès l'ajout de votre CV :
+                </div>
+                
+                <div style="margin: 20px 0;">
+                    <table style="width: 100%; margin: 16px 0; background: #0a1a0a; border: 1px solid #333333; border-radius: 8px;">
+                        <tr>
+                            <td style="padding: 20px; color: #ffffff; font-family: 'Rethink Sans', Arial, sans-serif; font-size: 16px;">
+                                🚀 Lancement immédiat de votre campagne automatisée
+                            </td>
+                        </tr>
+                    </table>
+                    <table style="width: 100%; margin: 16px 0; background: #0a1a0a; border: 1px solid #333333; border-radius: 8px;">
+                        <tr>
+                            <td style="padding: 20px; color: #ffffff; font-family: 'Rethink Sans', Arial, sans-serif; font-size: 16px;">
+                                👥 Visibilité auprès de +200 recruteurs actifs
+                            </td>
+                        </tr>
+                    </table>
+                    <table style="width: 100%; margin: 16px 0; background: #0a1a0a; border: 1px solid #333333; border-radius: 8px;">
+                        <tr>
+                            <td style="padding: 20px; color: #ffffff; font-family: 'Rethink Sans', Arial, sans-serif; font-size: 16px;">
+                                🎯 Matching intelligent avec les postes qui vous correspondent
+                            </td>
+                        </tr>
+                    </table>
+                    <table style="width: 100%; margin: 16px 0; background: #0a1a0a; border: 1px solid #333333; border-radius: 8px;">
+                        <tr>
+                            <td style="padding: 20px; color: #ffffff; font-family: 'Rethink Sans', Arial, sans-serif; font-size: 16px;">
+                                📧 Candidatures personnalisées générées par IA
+                            </td>
+                        </tr>
+                    </table>
+                    <table style="width: 100%; margin: 16px 0; background: #0a1a0a; border: 1px solid #333333; border-radius: 8px;">
+                        <tr>
+                            <td style="padding: 20px; color: #ffffff; font-family: 'Rethink Sans', Arial, sans-serif; font-size: 16px;">
+                                📈 Objectif : 4 entretiens garantis dans la semaine
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                
+                <div class="section-title" style="font-size: 20px !important; font-weight: 500 !important; margin: 40px 0 20px 0 !important; color: #ffffff !important;">
+                    Formats de CV acceptés :
+                </div>
+                
+                <ul class="feature-list" style="margin: 20px 0 !important; padding: 0 !important; list-style: none !important;">
+                    <li class="feature-item warning" style="margin: 16px 0 !important; padding: 20px !important; background-color: rgba(251, 191, 36, 0.1) !important; border: 1px solid rgba(251, 191, 36, 0.2) !important; border-radius: 8px !important; display: flex !important; align-items: center !important; color: #ffffff !important;">
+                        <span class="feature-icon" style="color: #fde047 !important; margin-right: 12px !important;">📄</span>
+                        <span class="feature-text" style="color: #ffffff !important;">PDF (recommandé pour une meilleure lisibilité)</span>
+                    </li>
+                    <li class="feature-item warning" style="margin: 16px 0 !important; padding: 20px !important; background-color: rgba(251, 191, 36, 0.1) !important; border: 1px solid rgba(251, 191, 36, 0.2) !important; border-radius: 8px !important; display: flex !important; align-items: center !important; color: #ffffff !important;">
+                        <span class="feature-icon" style="color: #fde047 !important; margin-right: 12px !important;">📝</span>
+                        <span class="feature-text" style="color: #ffffff !important;">DOC/DOCX (formats Microsoft Word)</span>
+                    </li>
+                    <li class="feature-item warning" style="margin: 16px 0 !important; padding: 20px !important; background-color: rgba(251, 191, 36, 0.1) !important; border: 1px solid rgba(251, 191, 36, 0.2) !important; border-radius: 8px !important; display: flex !important; align-items: center !important; color: #ffffff !important;">
+                        <span class="feature-icon" style="color: #fde047 !important; margin-right: 12px !important;">📊</span>
+                        <span class="feature-text" style="color: #ffffff !important;">Taille maximum : 5 Mo</span>
+                    </li>
+                </ul>
+                
+                <div class="highlight-box" style="background: linear-gradient(135deg, #111111 0%, #1a1a1a 100%) !important; background-color: #111111 !important; border: 1px solid #333333 !important; border-radius: 12px !important; padding: 32px !important; margin: 32px 0 !important; text-align: center;">
+                    <p class="highlight-text" style="font-size: 18px !important; color: #ffffff !important; margin: 0 !important; font-weight: 300 !important;">
+                        <strong style="color: #ffffff !important; font-weight: 500 !important;">Il suffit de 2 minutes</strong> pour télécharger votre CV et activer définitivement votre campagne automatisée.
+                    </p>
+                </div>
+                
+                <!-- CTA secondaire de rappel -->
+                <div class="cta-section" style="text-align: center; margin: 48px 0 !important;">
+                    <a href="https://kandi.jobs/formulaire/step-2?email={{ contact.EMAIL }}&tel={{ contact.SMS }}&prenom={{ contact.FIRST_NAME }}&nom={{ contact.LAST_NAME }}&gender={{ contact.GENDER | default:"" }}" class="cta-button" style="display: inline-block !important; background: linear-gradient(135deg, #e498fc 0%, #f53c4c 50%, #6e2fde 100%) !important; color: #ffffff !important; padding: 18px 36px !important; text-decoration: none !important; border-radius: 8px !important; font-weight: 700 !important; font-size: 18px !important;">
+                        <span style="color: #ffffff !important; font-weight: 700 !important;">Activer ma campagne maintenant</span>
+                    </a>
+                </div>
+                
+                <div style="margin-top: 32px; padding: 20px; background-color: rgba(255, 255, 255, 0.05); border-radius: 8px; border: 1px solid rgba(255, 255, 255, 0.1);">
+                    <p style="font-size: 14px; color: rgba(255, 255, 255, 0.9); margin: 0; line-height: 1.5; font-weight: 300;">
+                        <strong style="color: #ffffff; font-weight: 500;">💡 Conseil :</strong> Plus votre CV est à jour et détaillé, plus notre IA pourra générer des candidatures personnalisées et pertinentes pour maximiser vos chances d'obtenir des entretiens dans tous secteurs.
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Footer avec background image et effet glassmorphism -->
+        <div class="footer-wrapper" style="width: 100% !important; background-image: url('https://i.imgur.com/3Dg1zxQ.jpeg') !important; background-color: #000000 !important; background-size: cover !important; background-position: center !important;">
+            <div class="footer" style="max-width: 600px !important; margin: 0 auto !important; padding: 48px 32px !important; text-align: center; color: #ffffff !important;">
+                <div class="footer-content" style="background: rgba(0, 0, 0, 0.7) !important; backdrop-filter: blur(12px) !important; border-radius: 16px !important; padding: 32px 24px !important; border: 1px solid rgba(255, 255, 255, 0.1) !important;">
+                    <p style="font-style: italic; margin-bottom: 16px; color: #ffffff !important;">
+                        Cet email a été envoyé automatiquement car votre campagne Kandi ne peut pas démarrer sans CV
+                    </p>
+                    <p style="margin-bottom: 16px; color: #ffffff !important;">
+                        Besoin d'aide ? Notre équipe répond sous 2h : <a href="mailto:contact@kandi.jobs" style="color: #ffffff !important; text-decoration: none;">contact@kandi.jobs</a>
+                    </p>
+                    <p style="font-size: 12px; opacity: 0.9; margin: 0; color: #ffffff !important;">
+                        <a href="{{ unsubscribe }}" style="color: #ffffff !important; text-decoration: none;">Se désabonner</a> | 
+                        <a href="https://kandi.jobs" style="color: #ffffff !important; text-decoration: none;">kandi.jobs</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

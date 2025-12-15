@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
+    <meta name="color-scheme" content="light">
+    <meta name="supported-color-schemes" content="light">
+    <style>
+        .cta-button, .cta-button *, .cta-button a, .cta-button font {
+            color: #ffffff !important;
+        }
+        a[x-apple-data-detectors], 
+        a[x-apple-data-detectors] *, 
+        u + #body a, 
+        #MessageViewBody a {
+            color: inherit !important;
+            text-decoration: none !important;
+            background-color: transparent !important;
+        }
+    </style>
+    <title>Kandi - Premiers retours de ta campagne</title>
+</head>
+<body style="margin:0;padding:0;background-color:#ffffff;color:#000000;font-family:'Rethink Sans', -apple-system, BlinkMacSystemFont, Arial, sans-serif;">
+
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="background-color:#ffffff;">
+    <tr>
+        <td align="center" style="padding:20px 0;">
+            
+            <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="600" style="background-color:#ffffff;border-radius:8px;max-width:600px;border:1px solid #e5e5e5;">
+                
+                <!-- Header avec logo -->
+                <tr>
+                    <td align="center" style="padding:40px 20px 20px;background-color:#ffffff;">
+                        <img src="https://i.imgur.com/Id9eQMh.png" alt="Kandi" width="180" height="auto" style="display:block;border:0;border-radius:8px;">
+                    </td>
+                </tr>
+                
+                <!-- Content principal -->
+                <tr>
+                    <td style="padding:0 30px 60px 30px;">
+                        
+                        <!-- Salutation -->
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                            <tr>
+                                <td style="padding:20px 0;font-size:32px;color:#000000;font-weight:500;font-family:'Rethink Sans', Arial, sans-serif;letter-spacing:-0.5px;">
+                                    Bonjour {{ contact.FIRST_NAME | default:"" }},
+                                </td>
+                            </tr>
+                        </table>
+                        
+                        <!-- Message principal -->
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                            <tr>
+                                <td style="padding:10px 0 30px 0;font-size:20px;line-height:1.6;color:#000000;font-family:'Rethink Sans', Arial, sans-serif;font-weight:300;">
+                                    Ta campagne Kandi est bien lancée depuis 5 jours. Voici un premier aperçu de son avancement.
+                                </td>
+                            </tr>
+                        </table>
+                        
+                        <!-- Box stats highlight -->
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="background-color:#f0f8ff;border:2px solid #6e2fde;border-radius:8px;margin:30px 0;">
+                            <tr>
+                                <td style="padding:30px;text-align:center;">
+                                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                        <tr>
+                                            <td style="font-size:24px;color:#6e2fde;font-weight:600;padding-bottom:20px;font-family:'Rethink Sans', Arial, sans-serif;">
+                                                📊 État de ta campagne - Jour 5
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <!-- Stat 1 : Mails envoyés -->
+                                                <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="background-color:#ffffff;border-radius:6px;margin-bottom:15px;">
+                                                    <tr>
+                                                        <td style="padding:20px;text-align:left;">
+                                                            <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                                                <tr>
+                                                                    <td style="font-size:16px;color:#666666;font-weight:400;padding-bottom:8px;">
+                                                                        Candidatures envoyées
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td style="font-size:36px;color:#6e2fde;font-weight:600;font-family:'Rethink Sans', Arial, sans-serif;">
+                                                                        {{ CAMPAIGN_EMAILS_SENT | default:"0" }}
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                                
+                                                <!-- Stat 2 : Taux d'ouverture -->
+                                                <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="background-color:#ffffff;border-radius:6px;">
+                                                    <tr>
+                                                        <td style="padding:20px;text-align:left;">
+                                                            <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                                                <tr>
+                                                                    <td style="font-size:16px;color:#666666;font-weight:400;padding-bottom:8px;">
+                                                                        Taux d'ouverture (temporaire)
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td style="font-size:36px;color:#6e2fde;font-weight:600;font-family:'Rethink Sans', Arial, sans-serif;">
+                                                                        {{ CAMPAIGN_OPEN_RATE | default:"0" }}%
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                        
+                        <!-- Box conseil importante -->
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="background-color:#fffbeb;border:2px solid #f59e0b;border-radius:8px;margin:30px 0;">
+                            <tr>
+                                <td style="padding:25px;">
+                                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                        <tr>
+                                            <td style="font-size:18px;color:#f59e0b;font-weight:600;padding-bottom:15px;font-family:'Rethink Sans', Arial, sans-serif;">
+                                                ⏰ Important à savoir
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-size:16px;color:#000000;font-weight:300;line-height:1.6;font-family:'Rethink Sans', Arial, sans-serif;">
+                                                Le taux d'ouverture affiché ci-dessus est <strong style="font-weight:500;">temporaire et évoluera</strong> dans les jours à venir. Nous sommes seulement 5 jours après l'envoi de ta campagne.
+                                                <br><br>
+                                                Les recruteurs et responsables RH traitent les candidatures reçues à leur propre rythme. Certains consultent leur boîte mail quotidiennement, d'autres de manière hebdomadaire.
+                                                <br><br>
+                                                <strong style="font-weight:500;color:#f59e0b;">Ce taux va naturellement augmenter</strong> au fil des prochains jours.
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                        
+                        <!-- Section titre -->
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                            <tr>
+                                <td style="padding:40px 0 20px;font-size:24px;color:#000000;font-weight:500;font-family:'Rethink Sans', Arial, sans-serif;letter-spacing:-0.5px;">
+                                    Ce qui se passe en ce moment :
+                                </td>
+                            </tr>
+                        </table>
+                        
+                        <!-- Point 1 -->
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="background-color:#f0f9ff;border:2px solid #bae6fd;border-radius:6px;margin-bottom:10px;">
+                            <tr>
+                                <td style="padding:18px;font-size:16px;color:#000000;font-weight:300;line-height:1.5;font-family:'Rethink Sans', Arial, sans-serif;">
+                                    📧 Tes candidatures sont dans les boîtes mail des recruteurs ciblés
+                                </td>
+                            </tr>
+                        </table>
+                        
+                        <!-- Point 2 -->
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="background-color:#f0f9ff;border:2px solid #bae6fd;border-radius:6px;margin-bottom:10px;">
+                            <tr>
+                                <td style="padding:18px;font-size:16px;color:#000000;font-weight:300;line-height:1.5;font-family:'Rethink Sans', Arial, sans-serif;">
+                                    👁️ Certains recruteurs ont déjà consulté ton profil
+                                </td>
+                            </tr>
+                        </table>
+                        
+                        <!-- Point 3 -->
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="background-color:#f0f9ff;border:2px solid #bae6fd;border-radius:6px;margin-bottom:10px;">
+                            <tr>
+                                <td style="padding:18px;font-size:16px;color:#000000;font-weight:300;line-height:1.5;font-family:'Rethink Sans', Arial, sans-serif;">
+                                    ⏳ D'autres traiteront ta candidature dans les prochains jours
+                                </td>
+                            </tr>
+                        </table>
+                        
+                        <!-- Point 4 -->
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="background-color:#f0f9ff;border:2px solid #bae6fd;border-radius:6px;margin-bottom:30px;">
+                            <tr>
+                                <td style="padding:18px;font-size:16px;color:#000000;font-weight:300;line-height:1.5;font-family:'Rethink Sans', Arial, sans-serif;">
+                                    📈 Le taux d'ouverture continue d'augmenter progressivement
+                                </td>
+                            </tr>
+                        </table>
+                        
+                        <!-- Prochaine étape -->
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="background-color:#f0f8ff;border:2px solid #6e2fde;border-radius:8px;">
+                            <tr>
+                                <td style="padding:25px;text-align:center;">
+                                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                        <tr>
+                                            <td style="font-size:20px;color:#6e2fde;font-weight:600;padding-bottom:15px;font-family:'Rethink Sans', Arial, sans-serif;">
+                                                📬 Prochain email dans 5 jours
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-size:16px;color:#000000;font-weight:300;line-height:1.6;font-family:'Rethink Sans', Arial, sans-serif;">
+                                                Tu recevras un second email avec les <strong style="font-weight:500;">statistiques complètes et finales</strong> de ta campagne incluant :
+                                                <br><br>
+                                                • Taux d'ouverture mis à jour<br>
+                                                • Taux de réponse des recruteurs<br>
+                                                • Bilan complet de ta campagne
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                        
+                        <!-- Message de conclusion -->
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                            <tr>
+                                <td style="padding:40px 0 20px 0;font-size:16px;line-height:1.6;color:#000000;font-family:'Rethink Sans', Arial, sans-serif;font-weight:300;text-align:center;">
+                                    En attendant, reste attentif à ta boîte mail et réponds rapidement aux recruteurs qui te contactent.
+                                    <br><br>
+                                    <span style="color:#6e2fde;font-weight:500;">L'équipe Kandi te souhaite une excellente recherche ! 🚀</span>
+                                </td>
+                            </tr>
+                        </table>
+                        
+                    </td>
+                </tr>
+                
+                <!-- Footer avec image de fond -->
+                <tr>
+                    <td style="padding:0;background-image:url('https://i.imgur.com/3Dg1zxQ.jpeg');background-size:cover;background-position:center;background-color:#1a1a1a;">
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                            <tr>
+                                <td style="padding:40px 30px;text-align:center;background-color:rgba(0,0,0,0.6);">
+                                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                        <tr>
+                                            <td style="font-size:14px;color:#ffffff;font-style:italic;padding-bottom:15px;font-family:'Rethink Sans', Arial, sans-serif;">
+                                                Cet email fait partie du suivi automatique de ta campagne Kandi
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-size:12px;color:#cccccc;font-family:'Rethink Sans', Arial, sans-serif;">
+                                                <a href="{{ unsubscribe }}" style="color:#cccccc;text-decoration:none;">Se désabonner</a> | 
+                                                <a href="https://kandi.jobs" style="color:#cccccc;text-decoration:none;">kandi.jobs</a>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                
+            </table>
+            
+        </td>
+    </tr>
+</table>
+
+</body>
+</html>

@@ -1,0 +1,290 @@
+{
+    "brandName": "Kandi",
+    "brandDescription": "Plateforme d'automatisation de candidatures avec design premium fond blanc bulletproof",
+    "version": "2.1 - BULLETPROOF WHITE DESIGN (simple)",
+    "lastUpdated": "2025-08-14",
+    
+    "technicalRequirements": {
+        "compatibility": "Maximum compatibility across all email clients",
+        "strategy": "Fond blanc + styles simplifiés + anti-surlignage",
+        "priority": "Fonctionnel > Esthétique"
+    },
+
+    "emailDesign": {
+      "mandatoryStructure": {
+        "doctype": "<!DOCTYPE html>",
+        "metaTags": [
+            "<meta charset=\"UTF-8\">",
+            "<meta name=\"format-detection\" content=\"telephone=no, date=no, address=no, email=no\">",
+            "<meta name=\"color-scheme\" content=\"light\">",
+            "<meta name=\"supported-color-schemes\" content=\"light\">"
+        ],
+        "bodyStyle": "margin:0;padding:0;background-color:#ffffff;color:#000000;font-family:'Rethink Sans', -apple-system, BlinkMacSystemFont, Arial, sans-serif;",
+        "antiSurlignage": "OBLIGATOIRE - classe .cta-button pour forcer le texte blanc + neutralisation auto-link"
+      },
+      "layout": {
+        "maxWidth": "600px",
+        "containerBackground": "#ffffff",
+        "bodyBackground": "#ffffff",
+        "borderRadius": "8px",
+        "contentPadding": "0 30px 60px 30px",
+        "tableStructure": "Uniquement tables role=\"presentation\"",
+        "strictRules": {
+          "forbidden": ["linear-gradient", "box-shadow", "font-weight > 700", "border-radius > 8px", "backdrop-filter"],
+          "mandatory": ["background-color:#ffffff", "color:#000000", "classe .cta-button", "styles inline"]
+        },
+        "ctaPlacement": {
+          "aboveFold": "OBLIGATOIRE - CTA principal doit être visible sans scroll",
+          "maxDistanceFromTop": "350px depuis le haut de l'email",
+          "afterGreeting": "Placer le CTA principal après salutation + 1 phrase d'accroche max",
+          "beforeDetailedExplanation": "CTA AVANT les listes détaillées et arguments longs",
+          "principle": "Hook → CTA → Justification (pas l'inverse)"
+        }
+      },
+      "colors": {
+        "primary": {
+          "background": "#ffffff",
+          "text": "#000000",
+          "kandiViolet": "#6e2fde",
+          "ctaBackground": "#6e2fde",
+          "ctaText": "#ffffff",
+          "description": "Fond blanc, texte noir, CTA violet Kandi"
+        },
+        "tiles": {
+          "negative": { "background": "#f8f8f8", "border": "2px solid #e5e5e5", "text": "#000000" },
+          "positive": { "background": "#f0f9ff", "border": "2px solid #bae6fd", "text": "#000000" },
+          "urgency": { "background": "#fef2f2", "border": "2px solid #dc2626", "text": "#000000", "accent": "#dc2626" },
+          "conseil": { "background": "#fffbeb", "border": "2px solid #f59e0b", "text": "#000000", "accent": "#f59e0b" },
+          "highlight": { "background": "#f0f8ff", "border": "2px solid #6e2fde", "text": "#000000", "accent": "#6e2fde" }
+        },
+        "footer": {
+          "backgroundImage": "url('https://i.imgur.com/3Dg1zxQ.jpeg')",
+          "overlay": "rgba(0,0,0,0.6)",
+          "textColor": "#ffffff",
+          "linkColor": "#e498fc"
+        }
+      },
+      "typography": {
+        "fontFamily": "'Rethink Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif",
+        "fontImport": "https://fonts.googleapis.com/css2?family=Rethink+Sans:ital,wght@0,300;0,400;0,500;0,600&display=swap",
+        "weights": {
+          "light": 300,
+          "regular": 400, 
+          "medium": 500,
+          "semibold": 600
+        },
+        "sizes": {
+          "hero": "28px",
+          "greeting": "32px",
+          "sectionTitle": "20px",
+          "intro": "18px",
+          "body": "16px",
+          "button": "20px",
+          "caption": "15px",
+          "footer": "14px",
+          "small": "12px"
+        },
+        "lineHeights": {
+          "tight": "1.2",
+          "normal": "1.5", 
+          "relaxed": "1.6"
+        },
+        "hierarchy": {
+          "h1": { "fontSize": "28px", "fontWeight": 600, "marginBottom": "24px", "color": "#000000" },
+          "h2": { "fontSize": "24px", "fontWeight": 500, "marginBottom": "20px", "color": "#000000" },
+          "h3": { "fontSize": "20px", "fontWeight": 500, "marginBottom": "16px", "color": "#000000" },
+          "body": { "fontSize": "16px", "fontWeight": 300, "lineHeight": "1.6", "color": "#000000" },
+          "caption": { "fontSize": "14px", "fontWeight": 300, "color": "#666666" }
+        }
+      },
+      "components": {
+        "header": {
+          "padding": "40px 20px 20px",
+          "paddingMobile": "32px 24px 24px",
+          "backgroundColor": "#ffffff",
+          "textAlign": "center",
+          "logo": {
+            "maxWidth": "180px",
+            "maxWidthMobile": "140px",
+            "marginBottom": "0px",
+            "fallbackText": "KANDI",
+            "fallbackStyles": { "fontSize": "42px", "fontWeight": 600, "color": "#000000" }
+          }
+        },
+        "content": {
+          "padding": "0 30px 60px 30px",
+          "paddingMobile": "0 24px 48px 24px",
+          "backgroundColor": "#ffffff",
+          "maxWidth": "100%",
+          "ctaStrategy": {
+            "primaryCTA": {
+              "placement": "above-fold",
+              "maxPosition": "350px from email top",
+              "afterElements": ["greeting", "hook-sentence"],
+              "beforeElements": ["detailed-explanations", "feature-lists"],
+              "principle": "Montrer la valeur → Proposer l'action → Expliquer pourquoi"
+            },
+            "secondaryCTA": {
+              "placement": "after-arguments",
+              "purpose": "Rappel en bas de contenu",
+              "sameAction": "Même lien que CTA principal"
+            }
+          }
+        },
+        "button": {
+          "primary": {
+            "background": "#6e2fde",
+            "color": "#ffffff",
+            "padding": "18px 36px",
+            "paddingMobile": "16px 28px",
+            "borderRadius": "8px",
+            "fontWeight": 700,
+            "fontSize": "20px",
+            "fontSizeMobile": "16px",
+            "textDecoration": "none",
+            "border": "0",
+            "display": "inline-block",
+            "textAlign": "center",
+            "widthMobile": "auto"
+          },
+          "secondary": {
+            "background": "#6e2fde",
+            "color": "#ffffff",
+            "padding": "16px 32px",
+            "borderRadius": "8px",
+            "fontWeight": 600,
+            "fontSize": "16px",
+            "border": "0"
+          }
+        },
+        "featureList": {
+          "margin": "20px 0",
+          "padding": "0",
+          "listStyle": "none",
+          "placement": "APRÈS le CTA principal",
+          "purpose": "Justifier l'action après l'avoir proposée",
+          "item": {
+            "margin": "10px 0",
+            "padding": "16px",
+            "paddingMobile": "16px",
+            "borderRadius": "8px",
+            "fontSize": "16px",
+            "fontSizeMobile": "15px",
+            "fontWeight": 300,
+            "lineHeight": "1.5",
+            "display": "block",
+            "alignItems": "initial",
+            "color": "#000000"
+          },
+          "icon": { "width": "20px", "height": "20px", "marginRight": "12px", "fontSize": "16px", "lineHeight": "20px", "flexShrink": "0", "textAlign": "center" }
+        },
+        "highlightBox": {
+          "background": "#f0f8ff",
+          "border": "2px solid #6e2fde",
+          "borderRadius": "8px",
+          "padding": "16px",
+          "paddingMobile": "16px",
+          "margin": "10px 0",
+          "marginMobile": "10px 0",
+          "textAlign": "left",
+          "text": { "fontSize": "16px", "color": "#000000", "fontWeight": 300 }
+        },
+        "footer": {
+          "wrapper": {
+            "backgroundImage": "url('https://i.imgur.com/3Dg1zxQ.jpeg')",
+            "backgroundFallback": "#1a1a1a",
+            "backgroundSize": "cover",
+            "backgroundPosition": "center"
+          },
+          "container": { "maxWidth": "600px", "padding": "40px 30px" },
+          "content": {
+            "background": "rgba(0, 0, 0, 0.6)",
+            "padding": "0",
+            "borderRadius": "0",
+            "border": "0"
+          },
+          "text": { "fontSize": "14px", "color": "#ffffff", "fontWeight": 300, "textAlign": "center" },
+          "links": { "color": "#e498fc", "textDecoration": "none" }
+        }
+      },
+      "spacing": {
+        "sections": { "small": "16px", "medium": "24px", "large": "32px", "xlarge": "48px" },
+        "elements": { "greeting": "20px", "sectionTitle": "20px", "intro": "24px", "cta": "24px 0 32px 0", "primaryCTA": "24px 0 32px 0" },
+        "ctaGuidelines": { "beforePrimaryCTA": "Maximum 1 phrase d'accroche", "afterPrimaryCTA": "Toutes les explications détaillées", "aboveFoldContent": "Logo + Greeting + Hook + CTA = max 350px" }
+      },
+      "conversionOptimization": {
+        "primaryCTAStrategy": {
+          "visibility": "OBLIGATOIRE above-the-fold",
+          "positioning": "Après greeting + maximum 1 phrase d'accroche",
+          "beforeContent": ["Logo/Header", "Greeting personnalisée", "1 phrase d'accroche max", "CTA PRINCIPAL"],
+          "afterContent": ["Argumentaires détaillés", "Listes de fonctionnalités", "Social proof", "CTA secondaire", "Footer"]
+        },
+        "reasoning": "Décision en 3 secondes → CTA immédiatement accessible"
+      },
+        "darkModeProtection": {
+        "enabled": false,
+        "metaTags": { "colorScheme": "light", "supportedColorSchemes": "light" },
+        "cssCode": "",
+        "notes": "Pas d'inversion dark mode. Fond blanc uniquement."
+      },
+      "responsive": {
+        "breakpoint": "600px",
+        "mobile": { "containerMargin": "0 10px", "borderRadius": "8px", "ctaStrategy": "Bouton visible et lisible, largeur auto" }
+      },
+      "emailClientCompatibility": {
+        "outlook": { "mso": true, "pixelsPerInch": 96, "fallbackFonts": "Arial, sans-serif" },
+        "gmail": { "dataOgsc": true, "inlineStyles": "required", "backgroundFallbacks": true },
+        "appleMail": { "webkitSupport": true }
+      },
+      "assets": {
+        "logo": {
+          "primary": "https://i.imgur.com/Id9eQMh.png",
+          "alt": "Kandi Logo",
+          "fallback": "KANDI text",
+          "styling": "border-radius: 8px; (PAS de box-shadow)",
+          "description": "Logo 180px, bords 8px, sans ombre"
+        },
+        "backgroundImages": { "footer": "https://i.imgur.com/3Dg1zxQ.jpeg" }
+      },
+      "commonElements": {
+        "greeting": { "structure": "Bonjour {{ contact.FIRST_NAME | default:\"\" }},", "fontSize": "32px", "fontWeight": 500, "color": "#000000", "backgroundColor": "#ffffff" },
+        "unsubscribe": { "text": "Se désabonner", "variable": "{{ unsubscribe }}", "placement": "footer" },
+        "companySignature": { "email": "contact@kandi.jobs", "website": "kandi.jobs" }
+      },
+      "designPrinciples": {
+        "newStrategy": "FOND BLANC BULLETPROOF - Compatibilité maximale",
+        "contrast": "Texte noir sur fond blanc + CTA violet contrasté",
+        "accessibility": "Contrastes élevés, tailles lisibles",
+        "brandPersonality": "Premium, simple, compatible",
+        "visualHierarchy": "Typographie claire, tuiles légères, pas d'effets",
+        "mobilePriority": "CSS minimal, protections dark mode",
+        "conversionFirst": "CTA principal toujours above-the-fold",
+        "technicalFirst": "Fonctionnel > Esthétique > Innovation"
+      },
+      "templateInstructions": {
+        "NOUVELLES_REGLES_STRICTES": "VERSION 2.1 BULLETPROOF (simple)",
+        "structure_obligatoire": "Tables role=\"presentation\" uniquement",
+        "fond_obligatoire": "background-color:#ffffff partout",
+        "texte_obligatoire": "color:#000000 pour contenu principal",
+        "logo_obligatoire": "https://i.imgur.com/Id9eQMh.png avec border-radius:8px",
+        "css_anti_surlignage": "OBLIGATOIRE .cta-button + neutralisation auto-link",
+        "meta_tags_obligatoires": "format-detection + color-scheme + supported-color-schemes",
+        "cta_obligatoire": "background-color:#6e2fde avec classe .cta-button",
+        "tuiles_couleurs_fixes": "negative/positive/urgency/conseil/highlight",
+        "footer_image_obligatoire": "https://i.imgur.com/3Dg1zxQ.jpeg avec overlay foncé",
+        "interdictions_strictes": "linear-gradient, box-shadow, font-weight>700, border-radius>8px, backdrop-filter",
+        "ctaPlacement": "Logo → Greeting → 1 phrase max → CTA PRINCIPAL → Justifications → Footer",
+        "aboveFoldRule": "Le CTA principal doit TOUJOURS être visible à l'ouverture sans scroll",
+        "mandatoryElements": [
+          "Meta tags format-detection",
+          "Structure 100% tables role='presentation'",
+          "Styles inline + 1 seule classe autorisée (.cta-button)",
+          "Logo bords 8px, sans ombre",
+          "Fond blanc + texte noir",
+          "Largeur 600px max-width responsive",
+          "Accents français corrects"
+        ],
+        "htmlTemplate": "<!DOCTYPE html>\n<html>\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <meta name=\"format-detection\" content=\"telephone=no, date=no, address=no, email=no\">\n  <meta name=\"color-scheme\" content=\"light\">\n  <meta name=\"supported-color-schemes\" content=\"light\">\n  <style>\n    .cta-button, .cta-button *, .cta-button a, .cta-button font { color:#ffffff !important; }\n    a[x-apple-data-detectors], a[x-apple-data-detectors] *, u + #body a, #MessageViewBody a { color:inherit !important; text-decoration:none !important; background-color:transparent !important; }\n    /* Pas de CSS d'inversion dark mode */\n  </style>\n</head>\n<body style=\"margin:0;padding:0;background-color:#ffffff;color:#000000;font-family:'Rethink Sans', Arial, sans-serif;\">\n  <table role=\"presentation\" cellspacing=\"0\" cellpadding=\"0\" border=\"0\" width=\"100%\" style=\"background-color:#ffffff;\" bgcolor=\"#ffffff\">\n    <tr>\n      <td align=\"center\" style=\"padding:20px 0;\">\n        <table role=\"presentation\" cellspacing=\"0\" cellpadding=\"0\" border=\"0\" width=\"600\" style=\"background-color:#ffffff;border-radius:8px;max-width:600px;border:1px solid #e5e5e5;\" bgcolor=\"#ffffff\">\n          <tr>\n            <td align=\"center\" style=\"padding:40px 20px 20px;background-color:#ffffff;\">\n              <img src=\"https://i.imgur.com/Id9eQMh.png\" alt=\"Kandi\" width=\"180\" height=\"auto\" style=\"display:block;border:0;border-radius:8px;\">\n            </td>\n          </tr>\n          <!-- Contenu ici -->\n          <tr>\n            <td style=\"padding:0 30px 60px 30px;\">\n              <!-- Votre contenu -->\n            </td>\n          </tr>\n          <tr>\n            <td style=\"padding:0;background-image:url('https://i.imgur.com/3Dg1zxQ.jpeg');background-size:cover;background-position:center;background-color:#1a1a1a;\">\n              <table role=\"presentation\" cellspacing=\"0\" cellpadding=\"0\" border=\"0\" width=\"100%\">\n                <tr>\n                  <td style=\"padding:40px 30px;text-align:center;background-color:rgba(0,0,0,0.6);\">\n                    <!-- Footer content -->\n                  </td>\n                </tr>\n              </table>\n            </td>\n          </tr>\n        </table>\n      </td>\n    </tr>\n  </table>\n</body>\n</html>"
+      }
+    }
+  }

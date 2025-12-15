@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
+    <meta name="color-scheme" content="light dark">
+    <meta name="supported-color-schemes" content="light dark">
+    <!--[if !mso]><!-->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link href="https://fonts.googleapis.com/css2?family=Rethink+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700&display=swap" rel="stylesheet">
+    <!--<![endif]-->
+    <style>
+        /* Force white text on CTA buttons - TOUJOURS */
+        .cta-button, .cta-button *, .cta-button a, .cta-button font {
+            color: #ffffff !important;
+        }
+        
+        /* Neutralize auto-link detection */
+        a[x-apple-data-detectors], 
+        a[x-apple-data-detectors] *, 
+        u + #body a, 
+        #MessageViewBody a {
+            color: inherit !important;
+            text-decoration: none !important;
+            background-color: transparent !important;
+        }
+    </style>
+    <title>Kandi - Votre CV manque</title>
+</head>
+<body style="margin:0;padding:0;background-color:#ffffff;color:#000000;font-family:'Rethink Sans', -apple-system, BlinkMacSystemFont, Arial, sans-serif;">
+
+<!-- Wrapper 100% width -->
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="background-color:#ffffff;">
+    <tr>
+        <td align="center" style="padding:20px 0;">
+            
+            <!-- Main container 600px -->
+            <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="600" style="background-color:#ffffff;border-radius:8px;max-width:600px;border:1px solid #e5e5e5;">
+                
+                <!-- Header avec logo -->
+                <tr>
+                    <td align="center" style="padding:40px 20px 20px;background-color:#ffffff;">
+                        <!-- Logo Kandi sur fond noir avec bordures arrondies -->
+                        <img src="https://i.imgur.com/Id9eQMh.png" alt="Kandi" width="180" height="auto" style="display:block;border:0;border-radius:8px;">
+                    </td>
+                </tr>
+                
+                <!-- Content principal -->
+                <tr>
+                    <td style="padding:0 30px 60px 30px;">
+                        
+                        <!-- Salutation -->
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                            <tr>
+                                <td style="padding:20px 0;font-size:32px;color:#000000;font-weight:500;font-family:'Rethink Sans', Arial, sans-serif;letter-spacing:-0.5px;">
+                                    Bonjour {{ contact.FIRST_NAME | default:"" }},
+                                </td>
+                            </tr>
+                        </table>
+                        
+                        <!-- Message principal -->
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                            <tr>
+                                <td style="padding:10px 0 40px 0;font-size:20px;line-height:1.6;color:#000000;font-family:'Rethink Sans', Arial, sans-serif;font-weight:300;">
+                                    Votre campagne ne peut pas démarrer : il manque votre CV pour accéder aux <strong style="color:#6e2fde;font-weight:500;">+200 recruteurs partenaires</strong>.
+                                </td>
+                            </tr>
+                        </table>
+                        
+                        <!-- CTA Principal SIMPLE -->
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                            <tr>
+                                <td align="center" style="padding:30px 0;">
+                                    <table role="presentation" cellspacing="0" cellpadding="0" border="0">
+                                        <tr>
+                                            <td class="cta-button" style="background-color:#6e2fde;border-radius:8px;padding:18px 35px;">
+                                                <a href="https://kandi.jobs/formulaire/step-2?email={{ contact.EMAIL }}&tel={{ contact.SMS }}&prenom={{ contact.FIRST_NAME }}&nom={{ contact.LAST_NAME }}&gender={{ contact.GENDER | default:\"\" }}&is_from_mail=1&mail_id=XXX" 
+                                                   style="color:#FFFFFF !important;font-size:20px;font-weight:700;text-decoration:none;display:block;font-family:'Rethink Sans', Arial, sans-serif;letter-spacing:0.5px;text-align:center;">
+                                                    <font color="#FFFFFF" style="color:#FFFFFF !important;font-weight:700;font-size:20px;font-family:'Rethink Sans', Arial, sans-serif;text-align:center;">Télécharger mon CV maintenant</font>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                        
+                        <!-- Box urgence SIMPLE -->
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="background-color:#fef2f2;border:2px solid #dc2626;border-radius:8px;margin:30px 0;">
+                            <tr>
+                                <td style="padding:25px;text-align:center;">
+                                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                        <tr>
+                                            <td style="font-size:18px;color:#dc2626;font-weight:600;padding-bottom:10px;">
+                                                Actuellement, votre dossier est invisible
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-size:16px;color:#000000;font-weight:400;">
+                                                Sans CV, nos recruteurs ne peuvent pas évaluer votre candidature ni vous proposer d'opportunités
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                        
+                        <!-- Section "Ce qui se passe" -->
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                            <tr>
+                                <td style="padding:50px 0 30px;font-size:28px;color:#000000;font-weight:500;font-family:'Rethink Sans', Arial, sans-serif;letter-spacing:-0.5px;">
+                                    Ce qui se passe sans votre CV :
+                                </td>
+                            </tr>
+                        </table>
+                        
+                        <!-- Feature négative 1 -->
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="background-color:#f8f8f8;border:2px solid #e5e5e5;border-radius:6px;margin-bottom:10px;">
+                            <tr>
+                                <td style="padding:15px;font-size:16px;color:#000000;">
+                                    ❌ Votre profil reste masqué dans notre base de talents
+                                </td>
+                            </tr>
+                        </table>
+                        
+                        <!-- Feature négative 2 -->
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="background-color:#f8f8f8;border:2px solid #e5e5e5;border-radius:6px;margin-bottom:10px;">
+                            <tr>
+                                <td style="padding:15px;font-size:16px;color:#000000;">
+                                    ❌ Aucun recruteur ne peut évaluer vos compétences
+                                </td>
+                            </tr>
+                        </table>
+                        
+                        <!-- Feature négative 3 -->
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="background-color:#f8f8f8;border:2px solid #e5e5e5;border-radius:6px;margin-bottom:10px;">
+                            <tr>
+                                <td style="padding:15px;font-size:16px;color:#000000;">
+                                    ❌ Votre automatisation de candidatures ne peut pas se lancer
+                                </td>
+                            </tr>
+                        </table>
+                        
+                        <!-- Feature négative 4 -->
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="background-color:#f8f8f8;border:2px solid #e5e5e5;border-radius:6px;margin-bottom:20px;">
+                            <tr>
+                                <td style="padding:15px;font-size:16px;color:#000000;">
+                                    ❌ Vous passez à côté des offres du marché caché (70% de nos placements)
+                                </td>
+                            </tr>
+                        </table>
+                        
+                        <!-- Section "Ce qui se débloque" -->
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                            <tr>
+                                <td style="padding:50px 0 30px;font-size:28px;color:#000000;font-weight:500;font-family:'Rethink Sans', Arial, sans-serif;letter-spacing:-0.5px;">
+                                    Ce qui se débloque dès l'ajout de votre CV :
+                                </td>
+                            </tr>
+                        </table>
+                        
+                        <!-- Feature positive 1 -->
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="background-color:#f0f9ff;border:2px solid #bae6fd;border-radius:6px;margin-bottom:10px;">
+                            <tr>
+                                <td style="padding:15px;font-size:16px;color:#000000;">
+                                    🚀 Lancement immédiat de votre campagne automatisée
+                                </td>
+                            </tr>
+                        </table>
+                        
+                        <!-- Feature positive 2 -->
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="background-color:#f0f9ff;border:2px solid #bae6fd;border-radius:6px;margin-bottom:10px;">
+                            <tr>
+                                <td style="padding:15px;font-size:16px;color:#000000;">
+                                    👥 Visibilité auprès de +200 recruteurs actifs
+                                </td>
+                            </tr>
+                        </table>
+                        
+                        <!-- Feature positive 3 -->
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="background-color:#f0f9ff;border:2px solid #bae6fd;border-radius:6px;margin-bottom:10px;">
+                            <tr>
+                                <td style="padding:15px;font-size:16px;color:#000000;">
+                                    🎯 Matching intelligent avec les postes qui vous correspondent
+                                </td>
+                            </tr>
+                        </table>
+                        
+                        <!-- Feature positive 4 -->
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="background-color:#f0f9ff;border:2px solid #bae6fd;border-radius:6px;margin-bottom:10px;">
+                            <tr>
+                                <td style="padding:15px;font-size:16px;color:#000000;">
+                                    📧 Candidatures personnalisées générées par IA
+                                </td>
+                            </tr>
+                        </table>
+                        
+                        <!-- Feature positive 5 -->
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="background-color:#f0f9ff;border:2px solid #bae6fd;border-radius:6px;margin-bottom:20px;">
+                            <tr>
+                                <td style="padding:15px;font-size:16px;color:#000000;">
+                                    📈 Objectif : 4 entretiens garantis dans la semaine
+                                </td>
+                            </tr>
+                        </table>
+                        
+                        <!-- Highlight final SIMPLE -->
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="background-color:#f0f8ff;border:2px solid #6e2fde;border-radius:8px;">
+                            <tr>
+                                <td style="padding:25px;text-align:center;">
+                                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                        <tr>
+                                            <td style="font-size:20px;color:#6e2fde;font-weight:600;padding-bottom:10px;">
+                                                Il suffit de 2 minutes
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-size:16px;color:#000000;font-weight:400;">
+                                                pour télécharger votre CV et activer définitivement votre campagne automatisée
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                        
+                        <!-- CTA Final -->
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                            <tr>
+                                <td align="center" style="padding:40px 0;">
+                                    <table role="presentation" cellspacing="0" cellpadding="0" border="0">
+                                        <tr>
+                                            <td class="cta-button" style="background-color:#6e2fde;border-radius:8px;padding:18px 35px;">
+                                                <a href="https://kandi.jobs/formulaire/step-2?email={{ contact.EMAIL }}&tel={{ contact.SMS }}&prenom={{ contact.FIRST_NAME }}&nom={{ contact.LAST_NAME }}&gender={{ contact.GENDER | default:\"\" }}&is_from_mail=1&mail_id=XXX" 
+                                                   style="color:#FFFFFF !important;font-size:20px;font-weight:700;text-decoration:none;display:block;font-family:'Rethink Sans', Arial, sans-serif;letter-spacing:0.5px;text-align:center;">
+                                                    <font color="#FFFFFF" style="color:#FFFFFF !important;font-weight:700;font-size:20px;font-family:'Rethink Sans', Arial, sans-serif;text-align:center;">Activer ma campagne maintenant</font>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                        
+                        <!-- Conseil SIMPLE -->
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="background-color:#fffbeb;border:2px solid #f59e0b;border-radius:8px;">
+                            <tr>
+                                <td style="padding:20px;font-size:14px;color:#000000;font-weight:400;">
+                                    <strong style="color:#f59e0b;font-weight:600;">Conseil :</strong><br><br>
+                                    Plus votre CV est à jour et détaillé, plus notre IA pourra générer des candidatures personnalisées et pertinentes pour maximiser vos chances d'obtenir des entretiens dans tous secteurs
+                                </td>
+                            </tr>
+                        </table>
+                        
+                    </td>
+                </tr>
+                
+                <!-- Footer avec image de fond -->
+                <tr>
+                    <td style="padding:0;background-image:url('https://i.imgur.com/3Dg1zxQ.jpeg');background-size:cover;background-position:center;background-color:#1a1a1a;">
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                            <tr>
+                                <td style="padding:40px 30px;text-align:center;background-color:rgba(0,0,0,0.6);">
+                                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                        <tr>
+                                            <td style="font-size:14px;color:#ffffff;font-style:italic;padding-bottom:15px;font-family:'Rethink Sans', Arial, sans-serif;">
+                                                Cet email a été envoyé automatiquement car votre campagne Kandi ne peut pas démarrer sans CV
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-size:12px;color:#cccccc;font-family:'Rethink Sans', Arial, sans-serif;">
+                                                <a href="{{ unsubscribe }}" style="color:#cccccc;text-decoration:none;">Se désabonner</a> | 
+                                                <a href="https://kandi.jobs" style="color:#cccccc;text-decoration:none;">kandi.jobs</a>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                
+            </table>
+            
+        </td>
+    </tr>
+</table>
+
+</body>
+</html>

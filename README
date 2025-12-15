@@ -1,0 +1,663 @@
+# KANDI.JOBS - Guide Complet pour la Rédaction d'Emails
+
+## ⚡ RÈGLES TECHNIQUES STRICTES - EMAIL BULLETPROOF (fond blanc simple)
+
+### 🎯 STRUCTURE HTML OBLIGATOIRE
+
+**1. DOCTYPE et META TAGS :**
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
+    <meta name="color-scheme" content="light">
+    <meta name="supported-color-schemes" content="light">
+</head>
+```
+
+**2. CSS ANTI-SURLIGNAGE (OBLIGATOIRE, minimal) :**
+```html
+<style>
+    .cta-button, .cta-button *, .cta-button a, .cta-button font { color: #ffffff !important; }
+    a[x-apple-data-detectors], a[x-apple-data-detectors] *, u + #body a, #MessageViewBody a { color: inherit !important; text-decoration: none !important; background-color: transparent !important; }
+    /* Pas de dark mode : conserver fond blanc partout */
+</style>
+```
+
+**3. BODY FOND BLANC (obligatoire) :**
+```html
+<body style="margin:0;padding:0;background-color:#ffffff;color:#000000;font-family:'Rethink Sans', -apple-system, BlinkMacSystemFont, Arial, sans-serif;">
+```
+
+### 🏗️ STRUCTURE CONTENEUR OBLIGATOIRE
+
+**1. WRAPPER 100% :**
+```html
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="background-color:#ffffff;">
+    <tr>
+        <td align="center" style="padding:20px 0;">
+```
+
+**2. CONTAINER PRINCIPAL 600px :**
+```html
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="600" style="background-color:#ffffff;border-radius:8px;max-width:600px;border:1px solid #e5e5e5;">
+```
+
+**3. HEADER LOGO :**
+```html
+<tr>
+    <td align="center" style="padding:40px 20px 20px;background-color:#ffffff;">
+        <img src="https://i.imgur.com/Id9eQMh.png" alt="Kandi" width="180" height="auto" style="display:block;border:0;border-radius:8px;">
+    </td>
+</tr>
+```
+
+**4. CONTENU PRINCIPAL :**
+```html
+<tr>
+    <td style="padding:0 30px 60px 30px;">
+        <!-- Tout le contenu ici -->
+    </td>
+</tr>
+```
+
+### 🎨 COULEURS ET STYLES STRICTS (alignés sur EXAMPLE MAIL)
+
+**COULEURS OBLIGATOIRES :**
+- **Fond principal :** `#ffffff` (blanc)
+- **Texte principal :** `#000000` (noir)
+- **Violet Kandi :** `#6e2fde`
+- **CTA boutons :** `background-color:#6e2fde`
+- **Texte CTA :** `#ffffff` avec classe `.cta-button`
+
+**TYPOGRAPHIE OBLIGATOIRE (alignée sur l'email exemple bulletproof) :**
+- **Font principale :** `'Rethink Sans', -apple-system, BlinkMacSystemFont, Arial, sans-serif`
+- **Tailles indicatives :** Greeting `32px`, intro `20px`, corps `16px`, bouton `20px`
+- **Poids max :** `700` pour CTA (contenu à `300-500`)
+- **Letter-spacing max :** `-0.5px`
+
+**TUILES - COULEURS FIXES (simples, sans ombre) :**
+- **Négatives :** `background-color:#f8f8f8;border:2px solid #e5e5e5`
+- **Positives :** `background-color:#f0f9ff;border:2px solid #bae6fd`
+- **Urgence :** `background-color:#fef2f2;border:2px solid #dc2626`
+- **Conseil :** `background-color:#fffbeb;border:2px solid #f59e0b`
+- **Highlight :** `background-color:#f0f8ff;border:2px solid #6e2fde`
+
+### 🚫 INTERDICTIONS STRICTES (mise en page)
+
+**JAMAIS utiliser :**
+- ❌ `linear-gradient()` ou dégradés
+- ❌ `box-shadow` ou ombres
+- ❌ `letter-spacing` < `-0.5px`
+- ❌ `font-weight` > `700`
+- ❌ `border-radius` > `8px`
+- ❌ CSS externe complexe (seule `.cta-button` est autorisée)
+- ❌ `<div>`/`<span>` pour le contenu (tables uniquement)
+- ❌ Couleurs hors palette (fond blanc, texte noir, violet CTA)
+
+**TOUJOURS utiliser :**
+- ✅ Tables `role="presentation"` uniquement
+- ✅ Styles inline sur chaque élément
+- ✅ Couleurs solides (fond `#ffffff`, texte `#000000`)
+- ✅ Variables Brevo avec `| default:""`
+- ✅ Classe `.cta-button` sur les boutons (force le texte blanc)
+- ✅ `<font>` dans le CTA
+- ✅ `cellspacing="0" cellpadding="0" border="0"`
+ - ✅ CTA principal visible sans scroll (placement early comme dans l'exemple)
+
+### 📝 TEMPLATE CTA BOUTON OBLIGATOIRE (version simple)
+
+```html
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+    <tr>
+        <td align="center" style="padding:30px 0;">
+            <table role="presentation" cellspacing="0" cellpadding="0" border="0">
+                <tr>
+                    <td class="cta-button" style="background-color:#6e2fde;border-radius:8px;padding:18px 35px;">
+                        <a href="URL_ICI" style="color:#FFFFFF !important;font-size:18px;font-weight:600;text-decoration:none;display:block;font-family:'Rethink Sans', Arial, sans-serif;text-align:center;">
+                            <font color="#FFFFFF" style="color:#FFFFFF !important;font-weight:600;font-size:18px;font-family:'Rethink Sans', Arial, sans-serif;text-align:center;">TEXTE BOUTON</font>
+                        </a>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+```
+
+### 🖼️ FOOTER AVEC IMAGE OBLIGATOIRE (overlay simple)
+
+```html
+<tr>
+    <td style="padding:0;background-image:url('https://i.imgur.com/3Dg1zxQ.jpeg');background-size:cover;background-position:center;background-color:#1a1a1a;">
+        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+            <tr>
+                <td style="padding:40px 30px;text-align:center;background-color:rgba(0,0,0,0.6);">
+                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                        <tr>
+                            <td style="font-size:14px;color:#ffffff;font-style:italic;padding-bottom:15px;font-family:'Rethink Sans', Arial, sans-serif;">
+                                Texte explicatif
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="font-size:12px;color:#cccccc;font-family:'Rethink Sans', Arial, sans-serif;">
+                                <a href="{{ unsubscribe }}" style="color:#cccccc;text-decoration:none;">Se désabonner</a> | 
+                                <a href="https://kandi.jobs" style="color:#cccccc;text-decoration:none;">kandi.jobs</a>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </td>
+</tr>
+```
+
+### ⚡ RÈGLE D'OR
+**Structure simple, tables-only, fond blanc, CTA violet visible sans scroll.**
+
+### 🗣️ TUTOIEMENT OBLIGATOIRE - TON KANDI
+**TOUJOURS utiliser le tutoiement dans tous les emails :**
+- ✅ "Bonjour {{ contact.FIRST_NAME | default:"" }},"
+- ✅ "Votre campagne Kandi est prête à vous faire décrocher..."
+- ✅ "Finalisez maintenant et rejoignez les 2000+ candidats satisfaits"
+- ❌ JAMAIS "Votre profil", "Votre campagne", "Finalisez votre profil"
+
+**Exemples de phrases CORRECTES :**
+- "Tu t'es arrêté en cours de route"
+- "Il ne te reste que 5 minutes"
+- "Notre IA t'aide à trouver"
+- "Rejoins les candidats qui ont transformé"
+
+**Exemples de phrases INCORRECTES :**
+- "Vous avez arrêté en cours de route"
+- "Il ne vous reste que 5 minutes"
+- "Notre IA vous aide à trouver"
+- "Rejoignez les candidats qui ont transformé"
+
+---
+
+## Qu'est-ce que Kandi ?
+
+**Kandi.jobs** est une plateforme d'automatisation de candidatures qui révolutionne la recherche d'emploi pour tous les secteurs. Fondée en 2018, Kandi utilise l'intelligence artificielle pour automatiser les candidatures spontanées et donner accès au marché caché de l'emploi.
+
+**Mission :** Transformer la recherche d'emploi en permettant aux candidats d'accéder aux opportunités non-publiées grâce à l'automatisation intelligente des candidatures spontanées.
+
+**Vision :** Devenir la référence européenne de l'automatisation de candidatures pour tous les profils, en démocratisant l'accès au marché caché de l'emploi.
+
+## Variables Brevo - Guide Technique Complet
+
+### Variables CRM Kandi Disponibles
+
+**Variables TOUJOURS disponibles (sur tous les contacts) :**
+```
+{{ contact.EMAIL }}              - Email du contact
+{{ contact.SMS }}                - Numéro de téléphone
+{{ contact.FIRST_NAME }}         - Prénom
+{{ contact.LAST_NAME }}          - Nom de famille
+{{ contact.SIGNUP_DATE }}        - Date d'inscription
+```
+
+**Variables CONDITIONNELLES (à utiliser avec fallback) :**
+```
+{{ contact.ARE_STUDIES_OVER }}   - Booléen - Études terminées
+{{ contact.GENDER }}             - Catégorie - Genre
+{{ contact.SCHOOL }}             - Texte - École/formation
+```
+
+### Syntaxe de Base Brevo
+
+**1. Insertion simple :**
+```
+Bonjour {{ contact.FIRST_NAME }},
+Votre email : {{ contact.EMAIL }}
+```
+
+**2. Valeurs par défaut (OBLIGATOIRE pour variables conditionnelles) :**
+```
+Bonjour {{ contact.FIRST_NAME | default:"" }},
+{{ contact.GENDER | default:"" }}
+{{ contact.SCHOOL | default:"" }}
+```
+
+**3. Filtres utiles :**
+```
+{{ contact.FIRST_NAME | title }}           - Capitalise la première lettre
+{{ contact.EMAIL | lower }}                - En minuscules
+{{ contact.SIGNUP_DATE | date:"%d/%m/%Y" }} - Format date DD/MM/YYYY
+```
+
+**4. Conditions :**
+```
+{% if contact.ARE_STUDIES_OVER == true %}
+  <p>Félicitations pour l'obtention de votre diplôme !</p>
+{% else %}
+  <p>Nous espérons que vos études se passent bien !</p>
+{% endif %}
+
+{% if contact.SCHOOL %}
+  <p>Vous étudiez à {{ contact.SCHOOL }}</p>
+{% endif %}
+```
+
+### Templates de Variables pour Kandi
+
+**Salutation personnalisée :**
+```
+Bonjour {{ contact.FIRST_NAME | default:"" }},
+```
+
+**Lien Typeform 2 avec variables (inclure is_from_mail et mail_id) :**
+```
+https://kandi.jobs/formulaire/step-2?email={{ contact.EMAIL }}&tel={{ contact.SMS }}&prenom={{ contact.FIRST_NAME }}&nom={{ contact.LAST_NAME }}&gender={{ contact.GENDER | default:"" }}&is_from_mail=1&mail_id=XXX
+```
+
+**Personnalisation selon le profil :**
+```
+{% if contact.SCHOOL %}
+  En tant qu'étudiant à {{ contact.SCHOOL }}, vous avez accès à notre réseau de partenaires entreprises.
+{% else %}
+  Rejoignez notre réseau de +1000 candidats actifs.
+{% endif %}
+```
+
+**Variables dans l'objet de l'email :**
+```
+{{ contact.FIRST_NAME }}, votre profil Kandi vous attend
+Bonjour {{ contact.FIRST_NAME | default:"" }} - Dernière étape
+```
+
+### Règles d'Or pour Kandi
+
+**TOUJOURS faire :**
+- Utiliser `| default:""` pour GENDER, SCHOOL, ARE_STUDIES_OVER
+- Tester la personnalisation avec et sans variables
+- Vérifier que les liens Typeform 2 sont bien construits
+- Utiliser `{{ contact.FIRST_NAME | default:"" }}` dans la salutation
+
+**JAMAIS faire :**
+- Oublier les fallbacks sur variables conditionnelles
+- Mélanger les noms de variables (FIRST_NAME ≠ FIRSTNAME)
+- Laisser des variables vides dans les liens Typeform
+- Utiliser des variables non-existantes dans le CRM Kandi
+
+### Exemples Concrets Kandi
+
+**Email de relance basique :**
+```
+Bonjour {{ contact.FIRST_NAME | default:"" }},
+
+Votre inscription sur Kandi n'a pas pu être finalisée.
+
+{% if contact.SCHOOL %}
+En tant qu'étudiant à {{ contact.SCHOOL }}, vous bénéficiez d'un accès privilégié à notre réseau de recruteurs partenaires.
+{% endif %}
+
+[CTA] https://kandi.jobs/formulaire/step-2?email={{ contact.EMAIL }}&tel={{ contact.SMS }}&prenom={{ contact.FIRST_NAME }}&nom={{ contact.LAST_NAME }}&gender={{ contact.GENDER | default:"" }}&is_from_mail=1&mail_id=XXX
+```
+
+**Email avec conditions études :**
+```
+{% if contact.ARE_STUDIES_OVER == true %}
+  Félicitations pour votre diplôme ! Il est temps de lancer votre carrière.
+{% else %}
+  Préparez dès maintenant votre insertion professionnelle.
+{% endif %}
+```
+
+### Checklist Validation Template
+
+**Avant envoi, vérifier :**
+- Toutes les variables apparaissent en violet dans l'éditeur Brevo
+- Fallbacks `| default:""` sur GENDER, SCHOOL, ARE_STUDIES_OVER  
+- Syntaxe correcte : `contact.FIRST_NAME` (pas `contact.firstname`)
+- Lien Typeform 2 complet avec toutes les variables + `is_from_mail=1` + `mail_id=XXX`
+- Test d'envoi : aucune variable `{{ ... }}` ne reste affichée
+- Personnalisation cohérente avec le profil Kandi
+
+## Liens et Parcours d'Inscription
+
+**Site Principal :**
+- URL : https://kandi.jobs/
+- Fonction : Page de présentation avec un seul CTA vers le Typeform 1
+- Design : Landing page de conversion optimisée
+
+**Typeform 1 - Prise de Contact Initial :**
+- URL : https://kandi.jobs/formulaire/step-1
+- Champs : Nom, Prénom, Email, Téléphone
+- Objectif : Qualification initiale et ajout au CRM
+- Utilisation : Premier point de contact, leads froids
+
+**Typeform 2 - Finalisation Campagne :**
+- URL Template : 
+```
+https://kandi.jobs/formulaire/step-2?email={{ contact.EMAIL }}&tel={{ contact.SMS }}&prenom={{ contact.FIRST_NAME }}&nom={{ contact.LAST_NAME }}&gender={{ contact.GENDER | default:"" }}&is_from_mail=1&mail_id=XXX
+```
+- Pré-requis : Contact déjà présent dans le CRM Brevo
+- Objectif : Configuration détaillée du profil et lancement effectif de la campagne d'automatisation
+
+### Format obligatoire des liens T2 (avec mail_id)
+
+- Tous les liens vers le T2 doivent impérativement inclure les paramètres `is_from_mail=1` et `mail_id`.
+- Exemple exact (valeurs réelles) :
+```
+https://kandi.jobs/formulaire/step-2?email=alexis.albo.lapro@gmail.com&tel=%2B33674313845&prenom=Alexis&nom=Albouze&gender=Masculin&is_from_mail=1&mail_id=xxx
+```
+- Le `mail_id` (ici `xxx`) est fourni dans le prompt initial de génération. Modèle de prompt :
+```
+PROMPT : Créé un email HTML pour [DÉCRIRE LE CAS PRÉCIS ET LA CIBLE] en respectant exactement : 1. La charte graphique du fichier /KANDI MAILS/CHARTE GRAPHIQUE.JSON 2. Les guidelines du fichier /KANDI MAILS/README 3. La structure technique du fichier /KANDI MAILS/EXAMPLE MAIL.HTML LIVRABLES ATTENDUS : - Format de livraison exact du README (NOM DU TEMPLATE, OBJET, TEXTE D'APERÇU) - Fichier HTML complet dans /KANDI MAILS/TEMPLATES - MAIL/[nom-template].html - Utilisation obligatoire des variables Brevo et URL Typeform 2 avec hidden fields - Email bulletproof fond blanc avec protection mode sombre et responsive mobile - Ton et vocabulaire Kandi (tutoiement, marché caché 70%, +200 recruteurs, etc.) CAS D'USAGE : [Décrire précisément : relance, onboarding, abandon, etc.] OBJECTIF : [Action attendue du client]
+MAIL ID = XXX
+```
+- Lors de la première génération, remplacer systématiquement `XXX` par la valeur réelle fournie dans ta première instruction.
+
+## Format de Livraison des Templates Email
+
+### Structure Obligatoire pour Chaque Email
+
+Chaque template d'email doit être livré avec ces éléments facilement copiables :
+
+**1. Métadonnées du Template :**
+```
+NOM DU TEMPLATE: [nom-template-sans-espaces]
+OBJET: [Sujet optimisé pour la conversion max 50 caractères]
+TEXTE D'APERÇU: [Preview text optimisé max 90 caractères]
+```
+
+**2. Template HTML Complet :**
+```
+[Code HTML complet du template avec variables Brevo intégrées]
+```
+
+**3. Template JSON (si demandé) :**
+```
+{
+  "templateName": "[nom-template]",
+  "subject": "[Objet de l'email avec variables]",
+  "previewText": "[Texte d'aperçu]",
+  "htmlContent": "[HTML complet échappé avec variables]"
+}
+```
+
+### Optimisation pour la Conversion
+
+**Objets d'Email (max 50 caractères) :**
+- Urgence mesurée : "Votre profil Kandi - Dernière étape"
+- Bénéfice direct : "4 entretiens cette semaine ?"
+- FOMO : "200+ recruteurs vous attendent"
+- Personnalisé : "{{ contact.FIRST_NAME }}, votre campagne attend"
+- Question engageante : "Prêt pour le marché caché ?"
+
+**Textes d'Aperçu (max 90 caractères) :**
+- Complément objet : "Il ne reste que 5 minutes pour finaliser et accéder aux offres cachées"
+- Bénéfice concret : "Accès immédiat à +200 recruteurs actifs · Matching automatique"
+- Social proof : "Rejoignez les 1000+ candidats qui trouvent via notre réseau"
+- Urgence douce : "Votre espace personnel est prêt · Activation en 1 clic"
+
+**Bonnes Pratiques :**
+- Objet + Aperçu = Message complet et cohérent
+- Éviter les mots spam : "Gratuit", "Urgent", "!!!"
+- Personnalisation avec prénom quand pertinent
+- Émojis avec parcimonie (1 max par objet)
+- Test A/B entre versions directes vs questions
+
+## Modèle d'Affaires
+
+**Tarification :**
+- Prix d'entrée : 30€ (anciennement 50€)
+- Proposition de valeur : 4 entretiens garantis dans la semaine
+- Volume : 1000 clients par mois
+- Approche : 100% automatisé, aucun contact téléphonique avec les clients
+
+**Cibles Clients B2C (Principal) :**
+- Étudiants et jeunes diplômés 
+- Profils junior cherchant leur premier emploi
+- Reconversions professionnelles 
+- Candidats issus d'écoles partenaires
+- Recherche de premier emploi
+- Recherche d'emploi high level
+
+**Cibles Clients B2B2C (Stratégique) :**
+- Écoles et formations  (20K à 100K€ par partenaire)
+- Organismes de formation en reconversion numérique
+- Universités et écoles de commerce
+
+## Stratégie d'Acquisition
+
+**Canaux Principaux :**
+1. Partenariats B2B2C avec écoles (principal levier de croissance)
+2. Campagnes UGC Instagram agressives (budget : 50K€)
+3. Marketing digital ciblé sur les profils en reconversion
+4. Bouche-à-oreille étudiant
+
+**Positionnement :**
+- Marché caché : 70% des emplois ne sont jamais publiés
+- Automatisation intelligente : L'IA résout le problème de la recherche d'emploi manuelle
+- Candidature spontanée : Contacter directement les entreprises qui ont un besoin potentiel
+
+## Fonctionnement Technique
+
+**Processus Client :**
+1. Inscription via Typeform 1 (nom, prénom, email, téléphone)
+2. Ajout au CRM Brevo et qualification du lead
+3. Emails de nurturing avec lien vers Typeform 2 pré-rempli
+4. Finalisation via Typeform 2 avec CV et informations détaillées
+5. Configuration automatique des paramètres de recherche
+6. Génération IA des emails de candidature personnalisés
+7. Envoi automatisé aux entreprises ciblées
+8. Suivi et reporting des réponses
+
+**Technologie :**
+- IA générative pour la personnalisation des candidatures
+- Automatisation complète du processus
+- Ciblage géographique (focus France uniquement)
+- Base de données d'entreprises et contacts qualifiés
+- CRM Brevo pour la gestion des leads et l'email marketing
+
+## Expansion et Projets
+
+**Développement International :**
+- Restriction actuelle : France uniquement
+- Règle : Ne pas envoyer de mails si localisation autre que France
+- Projet d'internationalisation en cours d'étude
+
+**Évolution Tarifaire :**
+- Historique : Passage de 50€ à 30€ pour augmenter l'accessibilité
+- Test prix : Expérimentation 50€-60€ sur certains segments
+
+## Écosystème et Concurrence
+
+**Avantages Concurrentiels :**
+- Premier sur le marché français de l'automatisation de candidatures
+- IA propriétaire pour la personnalisation
+- Réseau de partenaires écoles développé
+- Expertise technique de 7 ans dans l'automatisation
+
+**Positionnement Marché :**
+- Pionnier de l'automatisation de candidatures en France
+- Focus exclusif (vs généralistes)
+- Approche B2B2C différenciante
+- Garantie résultats (4 entretiens/semaine)
+
+## Métriques Clés
+
+**Performance :**
+- 1000 clients/mois en acquisition
+- 4 entretiens garantis par semaine/client
+- 70% de placements via offres non-publiées
+- +200 recruteurs dans le réseau partenaire
+
+**Financier :**
+- Ticket moyen : 30€
+- Partenariats B2B : 20K€ à 100K€
+- Budget marketing : 50K€ Instagram UGC
+
+## Ton de Communication
+
+**Personnalité de Marque :**
+- Moderne et tech-forward : Utilisation de l'IA et automatisation
+- Accessible et démocratique : Prix abordable, processus simple
+- Orienté résultats : Promesses chiffrées et concrètes
+- Jeune et dynamique : Cible étudiants/jeunes diplômés
+- Professionnel mais humain : Accompagnement personnalisé
+
+**Valeurs :**
+- Innovation : Première plateforme d'automatisation de candidatures
+- Accessibilité : Démocratiser l'accès au marché caché
+- Efficacité : Résultats rapides et mesurables
+- Accompagnement : Support réactif (réponse sous 2h)
+- Transparence : Processus clair et promesses tenues
+
+## Guidelines de Rédaction Email
+
+**Éléments à Toujours Inclure :**
+- Référence aux 200+ recruteurs partenaires
+- Mention du marché caché (70% des emplois)
+- Promesse concrète (4 entretiens/semaine)
+- Processus en 5 minutes de setup
+
+**Vocabulaire Clé :**
+- "Marché caché" plutôt que "offres cachées"
+- "Automatisation intelligente" plutôt que "bot"
+- "Accompagnement personnalisé" plutôt que "service automatique"
+- "Matching" pour l'appariement candidat/poste
+- "Finaliser votre profil" plutôt que "compléter"
+
+**Ton et Style :**
+- **TUTOIEMENT SYSTÉMATIQUE OBLIGATOIRE** (cible jeune, ton Kandi)
+- Langage moderne mais professionnel
+- Phrases courtes et percutantes
+- Bénéfices concrets plutôt que features techniques
+- Urgence mesurée sans pression excessive
+
+**Éléments Différenciants à Mettre en Avant :**
+- Premier sur le marché français
+- IA propriétaire vs solutions generiques
+- Réseau de partenaires écoles exclusif
+- Accès au marché caché, beaucoup moins de compétition pour de meilleurs postes
+- Processus 100% automatisé vs manuel
+
+**Objections Fréquentes à Adresser :**
+- "Ça marche vraiment ?" → Statistiques et garanties
+- "C'est du spam ?" → Personnalisation IA et ciblage qualifié
+- "Pourquoi pas les job boards ?" → Marché caché 70%
+- "C'est trop beau" → Témoignages et process transparent
+
+## Exemples de Messages Types
+
+**Bénéfices Core :**
+- "Accès immédiat à +200 recruteurs actifs"
+- "70% de nos placements via offres non-publiées"
+- "Matching automatique avec les postes qui vous correspondent"
+- "Accompagnement personnalisé par nos conseillers"
+- "Processus d'inscription en 5 minutes"
+
+**Social Proof :**
+- "Plus de 1000 candidats nous font confiance chaque mois"
+- "Partenaire de [X] écoles et formations"
+- "7 ans d'expertise en automatisation de candidatures"
+
+**Call-to-Actions Efficaces :**
+- "Finaliser mon profil maintenant"
+- "Accéder aux offres cachées"
+- "Démarrer ma recherche automatisée"
+- "Rejoindre les 1000+ candidats actifs"
+- "Activer mon espace personnel"
+
+**Templates de Liens :**
+- Découverte : https://kandi.jobs/
+- Première inscription : https://kandi.jobs/formulaire/step-1
+- Finalisation profil : 
+```
+https://kandi.jobs/formulaire/step-2?email={{ contact.EMAIL }}&tel={{ contact.SMS }}&prenom={{ contact.FIRST_NAME }}&nom={{ contact.LAST_NAME }}&gender={{ contact.GENDER | default:"" }}&is_from_mail=1&mail_id=XXX
+```
+
+**Exemples d'Objets Optimisés :**
+```
+Votre profil Kandi - Dernière étape
+4 entretiens cette semaine ?
+{{ contact.FIRST_NAME }}, votre campagne attend
+200+ recruteurs vous attendent
+Prêt pour le marché caché ?
+Votre espace personnel est prêt
+Finaliser en 5 minutes ?
+```
+
+**Exemples de Textes d'Aperçu :**
+```
+Il ne reste que 5 minutes pour finaliser et accéder aux offres cachées
+Accès immédiat à +200 recruteurs actifs · Matching automatique
+Rejoignez les 1000+ candidats qui trouvent via notre réseau
+Votre espace personnel est prêt · Activation en 1 clic
+70% des emplois  ne sont jamais publiés · Accédez-y maintenant
+```
+
+---
+
+**NOTE IMPORTANTE :** Kandi se positionne comme le pionnier de l'automatisation de candidatures en France, avec une approche tech-forward qui démocratise l'accès au marché caché de l'emploi. Le ton doit refléter cette innovation tout en restant accessible et rassurant pour une cible principalement composée de jeunes en début de carrière ou en reconversion.
+
+**VARIABLES BREVO OBLIGATOIRES :** Toujours utiliser les variables Brevo correctement avec les fallbacks appropriés. Les variables conditionnelles (GENDER, SCHOOL, ARE_STUDIES_OVER) doivent TOUJOURS avoir un `| default:""`.
+
+**FORMAT DE LIVRAISON :** Chaque template doit inclure nom, objet, texte d'aperçu et code HTML, tous optimisés pour maximiser les taux d'ouverture et de conversion.
+
+---
+
+## 🐛 Fixes Techniques Obligatoires (version simple)
+
+### Light mode uniquement (pas d'inversion dark mode)
+Dans le `<head>` :
+```html
+<meta name="color-scheme" content="light">
+<meta name="supported-color-schemes" content="light">
+```
+
+Dans le `<style>` :
+```css
+/* Ne pas ajouter de CSS d'inversion dark mode */
+```
+
+### Structure simple (tables-only, fond blanc)
+```html
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="background-color:#ffffff;" bgcolor="#ffffff">
+  <tr>
+    <td align="center" style="padding:20px 0;">
+      <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="600" style="background-color:#ffffff;border-radius:8px;max-width:600px;border:1px solid #e5e5e5;" bgcolor="#ffffff">
+        <!-- header + contenu + footer -->
+      </table>
+    </td>
+  </tr>
+</table>
+```
+
+## ⚠️ PROBLÈME TECHNIQUE CRITIQUE - BREVO
+
+### Caractères "n" qui apparaissent partout
+**PROBLÈME :** Lors de l'import dans Brevo, des caractères "n" apparaissent partout dans le template, rendant l'email illisible.
+
+**CAUSE :** Les retours à la ligne (`\n`) dans le code HTML sont interprétés littéralement comme des caractères "n" par Brevo.
+
+**SOLUTION OBLIGATOIRE :**
+1. **Supprimer TOUS les retours à la ligne** du code HTML avant import
+2. **Coller le HTML en une seule ligne** dans l'éditeur Brevo
+3. **Utiliser des balises HTML** pour les espaces (pas de `\n`)
+
+**Exemple de code CORRECT pour Brevo :**
+```html
+<!DOCTYPE html><html><head><meta charset="UTF-8"><title>Kandi</title></head><body><table role="presentation"><tr><td>Contenu</td></tr></table></body></html>
+```
+
+**Exemple de code INCORRECT (cause des "n") :**
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Kandi</title>
+</head>
+```
+
+**VÉRIFICATION OBLIGATOIRE :**
+- Avant import dans Brevo, supprimer tous les sauts de ligne
+- Le HTML doit être sur une seule ligne
+- Tester l'aperçu dans Brevo avant validation

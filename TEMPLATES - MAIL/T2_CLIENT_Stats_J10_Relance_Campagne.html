@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
+    <meta name="color-scheme" content="light">
+    <meta name="supported-color-schemes" content="light">
+    <!--[if !mso]><!-->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link href="https://fonts.googleapis.com/css2?family=Rethink+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700&display=swap" rel="stylesheet">
+    <!--<![endif]-->
+    <style>
+        /* Force white text on CTA buttons */
+        .cta-button, .cta-button *, .cta-button a, .cta-button font {
+            color: #ffffff !important;
+        }
+        
+        /* Neutralize auto-link detection */
+        a[x-apple-data-detectors], 
+        a[x-apple-data-detectors] *, 
+        u + #body a, 
+        #MessageViewBody a {
+            color: inherit !important;
+            text-decoration: none !important;
+            background-color: transparent !important;
+        }
+    </style>
+    <title>Kandi - Résultats de ta campagne</title>
+</head>
+<body style="margin:0;padding:0;background-color:#ffffff;color:#000000;font-family:'Rethink Sans', -apple-system, BlinkMacSystemFont, Arial, sans-serif;">
+
+<!-- Wrapper 100% width -->
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="background-color:#ffffff;">
+    <tr>
+        <td align="center" style="padding:20px 0;">
+            
+            <!-- Main container 600px -->
+            <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="600" style="background-color:#ffffff;border-radius:8px;max-width:600px;border:1px solid #e5e5e5;">
+                
+                <!-- Header avec logo -->
+                <tr>
+                    <td align="center" style="padding:40px 20px 20px;background-color:#ffffff;">
+                        <img src="https://i.imgur.com/Id9eQMh.png" alt="Kandi" width="180" height="auto" style="display:block;border:0;border-radius:8px;">
+                    </td>
+                </tr>
+                
+                <!-- Content principal -->
+                <tr>
+                    <td style="padding:0 30px 60px 30px;">
+                        
+                        <!-- Salutation -->
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                            <tr>
+                                <td style="padding:20px 0;font-size:32px;color:#000000;font-weight:500;font-family:'Rethink Sans', Arial, sans-serif;letter-spacing:-0.5px;">
+                                    Bonjour {{ contact.FIRST_NAME | default:"" }},
+                                </td>
+                            </tr>
+                        </table>
+                        
+                        <!-- Message principal -->
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                            <tr>
+                                <td style="padding:10px 0 40px 0;font-size:20px;line-height:1.6;color:#000000;font-family:'Rethink Sans', Arial, sans-serif;font-weight:300;">
+                                    Ta campagne Kandi est officiellement terminée ! Voici le récapitulatif de tes résultats.
+                                </td>
+                            </tr>
+                        </table>
+                        
+                        <!-- Box statistiques -->
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="background-color:#f0f8ff;border:2px solid #6e2fde;border-radius:8px;margin-bottom:40px;">
+                            <tr>
+                                <td style="padding:30px;">
+                                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                        <tr>
+                                            <td style="font-size:24px;color:#6e2fde;font-weight:600;padding-bottom:20px;text-align:center;">
+                                                📊 Résultats de ta campagne
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding:15px 0;border-bottom:1px solid #bae6fd;">
+                                                <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                                    <tr>
+                                                        <td style="font-size:16px;color:#666666;font-weight:400;">
+                                                            Mails envoyés
+                                                        </td>
+                                                        <td align="right" style="font-size:24px;color:#000000;font-weight:600;">
+                                                            {{ contact.CAMPAIGN_EMAILS_SENT | default:"120" }}
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding:15px 0;">
+                                                <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                                    <tr>
+                                                        <td style="font-size:16px;color:#666666;font-weight:400;">
+                                                            Taux d'ouverture
+                                                        </td>
+                                                        <td align="right" style="font-size:24px;color:#6e2fde;font-weight:600;">
+                                                            {{ contact.CAMPAIGN_OPEN_RATE | default:"28" }}%
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                        
+                        <!-- CTA Principal -->
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                            <tr>
+                                <td align="center" style="padding:30px 0;">
+                                    <table role="presentation" cellspacing="0" cellpadding="0" border="0">
+                                        <tr>
+                                            <td class="cta-button" style="background-color:#6e2fde;border-radius:8px;padding:18px 35px;">
+                                                <a href="https://kandi.jobs/formulaire/step-2?email={{ contact.EMAIL }}&tel={{ contact.SMS }}&prenom={{ contact.FIRST_NAME }}&nom={{ contact.LAST_NAME }}&gender={{ contact.GENDER | default:'' }}&aw_master_id={{ contact.aw_master_id }}&is_from_mail=1&mail_id=PP_STATS_J10" 
+                                                   style="color:#FFFFFF !important;font-size:20px;font-weight:700;text-decoration:none;display:block;font-family:'Rethink Sans', Arial, sans-serif;letter-spacing:0.5px;text-align:center;">
+                                                    <font color="#FFFFFF" style="color:#FFFFFF !important;font-weight:700;font-size:20px;font-family:'Rethink Sans', Arial, sans-serif;text-align:center;">Lancer une nouvelle campagne</font>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                        
+                        <!-- Section "Pourquoi relancer ?" -->
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                            <tr>
+                                <td style="padding:40px 0 30px;font-size:28px;color:#000000;font-weight:500;font-family:'Rethink Sans', Arial, sans-serif;letter-spacing:-0.5px;">
+                                    Pourquoi relancer une campagne maintenant ?
+                                </td>
+                            </tr>
+                        </table>
+                        
+                        <!-- Raison 1 - Jamais les mêmes personnes -->
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="background-color:#f0f9ff;border:2px solid #bae6fd;border-radius:8px;margin-bottom:15px;">
+                            <tr>
+                                <td style="padding:20px;">
+                                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                        <tr>
+                                            <td style="font-size:18px;color:#000000;font-weight:600;padding-bottom:8px;">
+                                                🎯 Tu ne contacteras jamais les mêmes personnes
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-size:16px;color:#000000;font-weight:300;line-height:1.6;">
+                                                Même si tu relances exactement la même campagne au mot près, notre système garantit que tu ne recontacteras <strong style="font-weight:500;">jamais les mêmes recruteurs</strong>. C'est automatique, tu accèdes à de nouvelles opportunités à chaque fois.
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                        
+                        <!-- Raison 2 - IA améliorée -->
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="background-color:#f0f9ff;border:2px solid #bae6fd;border-radius:8px;margin-bottom:15px;">
+                            <tr>
+                                <td style="padding:20px;">
+                                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                        <tr>
+                                            <td style="font-size:18px;color:#000000;font-weight:600;padding-bottom:8px;">
+                                                🤖 Notre IA a appris de ta première campagne
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-size:16px;color:#000000;font-weight:300;line-height:1.6;">
+                                                L'intelligence artificielle de Kandi a mieux compris ton profil et tes préférences. Résultat : <strong style="font-weight:500;">des candidatures encore plus ciblées et pertinentes</strong> pour maximiser tes chances d'obtenir des entretiens.
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                        
+                        <!-- Raison 3 - Optimisation possible -->
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="background-color:#f0f9ff;border:2px solid #bae6fd;border-radius:8px;margin-bottom:30px;">
+                            <tr>
+                                <td style="padding:20px;">
+                                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                        <tr>
+                                            <td style="font-size:18px;color:#000000;font-weight:600;padding-bottom:8px;">
+                                                ✨ Tu peux optimiser pour de meilleurs résultats
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-size:16px;color:#000000;font-weight:300;line-height:1.6;">
+                                                Profites-en pour affiner ton prompt (domaine d'activité plus précis, secteur différent) ou mettre à jour ton CV avec tes nouvelles compétences. <strong style="font-weight:500;">Plus ton profil est optimisé, meilleurs sont les résultats.</strong>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                        
+                        <!-- Section ROI -->
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                            <tr>
+                                <td style="padding:40px 0 30px;font-size:28px;color:#000000;font-weight:500;font-family:'Rethink Sans', Arial, sans-serif;letter-spacing:-0.5px;">
+                                    Un investissement qui vaut vraiment le coup
+                                </td>
+                            </tr>
+                        </table>
+                        
+                        <!-- Box ROI -->
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="background-color:#fffbeb;border:2px solid #f59e0b;border-radius:8px;margin-bottom:30px;">
+                            <tr>
+                                <td style="padding:25px;">
+                                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                        <tr>
+                                            <td style="font-size:18px;color:#f59e0b;font-weight:600;padding-bottom:15px;">
+                                                💡 Faisons le calcul ensemble
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-size:16px;color:#000000;font-weight:300;line-height:1.6;padding-bottom:15px;">
+                                                En moyenne, <strong style="font-weight:500;">30€ te permettent d'envoyer environ 120 candidatures ciblées</strong>. Si tu remets 50€, tu peux atteindre <strong style="font-weight:500;">~200 candidatures</strong>, ce qui double presque tes chances d'obtenir des entretiens.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-size:16px;color:#000000;font-weight:300;line-height:1.6;">
+                                                Pense au salaire que tu vas obtenir grâce à ces opportunités : l'investissement est <strong style="font-weight:500;color:#f59e0b;">largement rentabilisé dès le premier mois de travail.</strong>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                        
+                        <!-- Highlight final -->
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="background-color:#f0f8ff;border:2px solid #6e2fde;border-radius:8px;margin-bottom:40px;">
+                            <tr>
+                                <td style="padding:25px;text-align:center;">
+                                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                        <tr>
+                                            <td style="font-size:20px;color:#6e2fde;font-weight:600;padding-bottom:10px;">
+                                                📈 Plus de candidatures = Plus d'entretiens = Job rapidement
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-size:16px;color:#000000;font-weight:300;line-height:1.6;">
+                                                Avec une IA optimisée et de nouveaux contacts, ta prochaine campagne a toutes les chances d'être encore plus performante que la première.
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                        
+                        <!-- CTA Final -->
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                            <tr>
+                                <td align="center" style="padding:30px 0 20px 0;">
+                                    <table role="presentation" cellspacing="0" cellpadding="0" border="0">
+                                        <tr>
+                                            <td class="cta-button" style="background-color:#6e2fde;border-radius:8px;padding:18px 35px;">
+                                                <a href="https://kandi.jobs/formulaire/step-2?email={{ contact.EMAIL }}&tel={{ contact.SMS }}&prenom={{ contact.FIRST_NAME }}&nom={{ contact.LAST_NAME }}&gender={{ contact.GENDER | default:'' }}&aw_master_id={{ contact.aw_master_id }}&is_from_mail=1&mail_id=PP_STATS_J10" 
+                                                   style="color:#FFFFFF !important;font-size:20px;font-weight:700;text-decoration:none;display:block;font-family:'Rethink Sans', Arial, sans-serif;letter-spacing:0.5px;text-align:center;">
+                                                    <font color="#FFFFFF" style="color:#FFFFFF !important;font-weight:700;font-size:20px;font-family:'Rethink Sans', Arial, sans-serif;text-align:center;">Relancer ma campagne maintenant</font>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                        
+                        <!-- Note finale -->
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                            <tr>
+                                <td style="padding:20px 0;font-size:15px;color:#666666;text-align:center;line-height:1.6;font-family:'Rethink Sans', Arial, sans-serif;font-weight:300;">
+                                    Rappel : 70% des emplois ne sont jamais publiés sur les job boards.<br>
+                                    Avec Kandi, tu accèdes au <strong style="color:#000000;font-weight:500;">marché caché de l'emploi</strong>.
+                                </td>
+                            </tr>
+                        </table>
+                        
+                    </td>
+                </tr>
+                
+                <!-- Footer avec image de fond -->
+                <tr>
+                    <td style="padding:0;background-image:url('https://i.imgur.com/3Dg1zxQ.jpeg');background-size:cover;background-position:center;background-color:#1a1a1a;">
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                            <tr>
+                                <td style="padding:40px 30px;text-align:center;background-color:rgba(0,0,0,0.6);">
+                                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                        <tr>
+                                            <td style="font-size:14px;color:#ffffff;font-style:italic;padding-bottom:15px;font-family:'Rethink Sans', Arial, sans-serif;">
+                                                Tes résultats de campagne et ton accès au marché caché t'attendent
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-size:12px;color:#cccccc;font-family:'Rethink Sans', Arial, sans-serif;">
+                                                <a href="{{ unsubscribe }}" style="color:#cccccc;text-decoration:none;">Se désabonner</a> | 
+                                                <a href="https://kandi.jobs" style="color:#cccccc;text-decoration:none;">kandi.jobs</a>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                
+            </table>
+            
+        </td>
+    </tr>
+</table>
+
+</body>
+</html>

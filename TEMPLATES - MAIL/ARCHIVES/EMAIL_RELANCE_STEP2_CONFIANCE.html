@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
+    <meta name="color-scheme" content="light dark">
+    <meta name="supported-color-schemes" content="light dark">
+    <!--[if !mso]><!-->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link href="https://fonts.googleapis.com/css2?family=Rethink+Sans:ital,wght@0,300;0,400;0,500;0,600&display=swap" rel="stylesheet">
+    <!--<![endif]-->
+    <style>
+        /* Force white text on CTA buttons - TOUJOURS */
+        .cta-button, .cta-button *, .cta-button a, .cta-button font { color: #ffffff !important; }
+        
+        /* Neutralize auto-link detection */
+        a[x-apple-data-detectors], a[x-apple-data-detectors] *, u + #body a, #MessageViewBody a {
+            color: inherit !important; text-decoration: none !important; background-color: transparent !important;
+        }
+        
+        /* Protection contre l'inversion automatique (Dark Mode) */
+        @media (prefers-color-scheme: dark) {
+          body, table, td, p, a, h1, h2, h3, h4, h5, h6 {
+            background-color: #000000 !important;
+            color: #ffffff !important;
+          }
+        }
+        /* Protection spécifique Gmail */
+        [data-ogsc] body, [data-ogsc] table, [data-ogsc] td, [data-ogsc] p, [data-ogsc] a, [data-ogsc] h1, [data-ogsc] h2, [data-ogsc] h3 {
+          background-color: #000000 !important;
+          color: #ffffff !important;
+        }
+    </style>
+    <title>Kandi - Relance finalisation profil</title>
+</head>
+<body style="margin:0;padding:0;background-color:#ffffff;color:#000000;font-family:'Rethink Sans', -apple-system, BlinkMacSystemFont, Arial, sans-serif;">
+
+<!-- Wrapper 100% width -->
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="background-color:#ffffff;">
+  <tr>
+    <td align="center" style="padding:20px 0;">
+      
+      <!-- Main container 600px -->
+      <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="600" style="background-color:#ffffff;border-radius:8px;max-width:600px;border:1px solid #e5e5e5;">
+        
+        <!-- Header avec logo -->
+        <tr>
+          <td align="center" style="padding:40px 20px 20px;background-color:#ffffff;">
+            <img src="https://i.imgur.com/Id9eQMh.png" alt="Kandi" width="180" height="auto" style="display:block;border:0;border-radius:8px;">
+          </td>
+        </tr>
+        
+        <!-- Contenu principal -->
+        <tr>
+          <td style="padding:0 30px 60px 30px;">
+            
+            <!-- Salutation -->
+            <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+              <tr>
+                <td style="padding:20px 0;font-size:28px;color:#000000;font-weight:500;font-family:'Rethink Sans', Arial, sans-serif;letter-spacing:-0.5px;">
+                  Bonjour {{ contact.FIRST_NAME | default:"" }},
+                </td>
+              </tr>
+            </table>
+            
+            <!-- Accroche courte (max 1 phrase) -->
+            <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+              <tr>
+                <td style="padding:8px 0 8px 0;font-size:18px;line-height:1.6;color:#000000;font-family:'Rethink Sans', Arial, sans-serif;font-weight:300;">
+                  Tu t'es arrêté en cours de route — bonne nouvelle, il ne te reste que 5 minutes pour activer ton accès au marché caché.
+                </td>
+              </tr>
+            </table>
+            
+            <!-- CTA Principal (above the fold) -->
+            <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+              <tr>
+                <td align="center" style="padding:24px 0 32px 0;">
+                  <table role="presentation" cellspacing="0" cellpadding="0" border="0">
+                    <tr>
+                      <td class="cta-button" style="background-color:#6e2fde;border-radius:8px;padding:18px 35px;">
+                        <a href="https://kandi.jobs/formulaire/step-2?email={{ contact.EMAIL }}&tel={{ contact.SMS }}&prenom={{ contact.FIRST_NAME }}&nom={{ contact.LAST_NAME }}&gender={{ contact.GENDER | default:"" }}" style="color:#FFFFFF !important;font-size:18px;font-weight:600;text-decoration:none;display:block;font-family:'Rethink Sans', Arial, sans-serif;text-align:center;">
+                          <font color="#FFFFFF" style="color:#FFFFFF !important;font-weight:600;font-size:18px;font-family:'Rethink Sans', Arial, sans-serif;text-align:center;">Finaliser mon profil maintenant</font>
+                        </a>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+            
+            <!-- Justifications (après CTA) -->
+            
+            <!-- Tuile positive 1 -->
+            <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="background-color:#f0f9ff;border:2px solid #bae6fd;border-radius:8px;margin-bottom:10px;">
+              <tr>
+                <td style="padding:16px;font-size:16px;color:#000000;font-family:'Rethink Sans', Arial, sans-serif;font-weight:300;">
+                  Accès immédiat à +200 recruteurs actifs qui consultent les profils Kandi.
+                </td>
+              </tr>
+            </table>
+            
+            <!-- Tuile highlight -->
+            <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="background-color:#f0f8ff;border:2px solid #6e2fde;border-radius:8px;margin-bottom:10px;">
+              <tr>
+                <td style="padding:16px;font-size:16px;color:#000000;font-family:'Rethink Sans', Arial, sans-serif;font-weight:300;">
+                  70% des emplois ne sont jamais publiés : on te connecte directement au marché caché.
+                </td>
+              </tr>
+            </table>
+            
+            <!-- Tuile positive 2 -->
+            <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="background-color:#f0f9ff;border:2px solid #bae6fd;border-radius:8px;margin-bottom:10px;">
+              <tr>
+                <td style="padding:16px;font-size:16px;color:#000000;font-family:'Rethink Sans', Arial, sans-serif;font-weight:300;">
+                  Objectif clair : 4 entretiens dès cette semaine grâce au matching automatique.
+                </td>
+              </tr>
+            </table>
+            
+            <!-- Tuile conseil -->
+            <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="background-color:#fffbeb;border:2px solid #f59e0b;border-radius:8px;margin-bottom:10px;">
+              <tr>
+                <td style="padding:16px;font-size:14px;color:#000000;font-family:'Rethink Sans', Arial, sans-serif;font-weight:400;">
+                  Besoin d'un coup de main ? Notre équipe te répond en moins de 2h.
+                </td>
+              </tr>
+            </table>
+            
+            <!-- CTA Secondaire (rappel) -->
+            <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+              <tr>
+                <td align="center" style="padding:24px 0 0 0;">
+                  <table role="presentation" cellspacing="0" cellpadding="0" border="0">
+                    <tr>
+                      <td class="cta-button" style="background-color:#6e2fde;border-radius:8px;padding:16px 32px;">
+                        <a href="https://kandi.jobs/formulaire/step-2?email={{ contact.EMAIL }}&tel={{ contact.SMS }}&prenom={{ contact.FIRST_NAME }}&nom={{ contact.LAST_NAME }}&gender={{ contact.GENDER | default:"" }}" style="color:#FFFFFF !important;font-size:16px;font-weight:600;text-decoration:none;display:block;font-family:'Rethink Sans', Arial, sans-serif;text-align:center;">
+                          <font color="#FFFFFF" style="color:#FFFFFF !important;font-weight:600;font-size:16px;font-family:'Rethink Sans', Arial, sans-serif;text-align:center;">Activer mon accès au marché caché</font>
+                        </a>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+            
+          </td>
+        </tr>
+        
+        <!-- Footer avec image de fond -->
+        <tr>
+          <td style="padding:0;background-image:url('https://i.imgur.com/3Dg1zxQ.jpeg');background-size:cover;background-position:center;background-color:#1a1a1a;">
+            <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+              <tr>
+                <td style="padding:40px 30px;text-align:center;background-color:rgba(0,0,0,0.6);">
+                  <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                    <tr>
+                      <td style="font-size:14px;color:#ffffff;font-style:italic;padding-bottom:15px;font-family:'Rethink Sans', Arial, sans-serif;">
+                        Finalise en 5 minutes et démarre l'automatisation de tes candidatures.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="font-size:14px;color:#ffffff;padding-bottom:15px;font-family:'Rethink Sans', Arial, sans-serif;">
+                        Besoin d'aide ? Notre équipe répond sous 2h : 
+                        <a href="mailto:contact@kandi.jobs" style="color:#e498fc;text-decoration:none;font-weight:500;">contact@kandi.jobs</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="font-size:12px;color:#cccccc;font-family:'Rethink Sans', Arial, sans-serif;">
+                        <a href="{{ unsubscribe }}" style="color:#cccccc;text-decoration:none;">Se désabonner</a> | 
+                        <a href="https://kandi.jobs" style="color:#cccccc;text-decoration:none;">kandi.jobs</a>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        
+      </table>
+      
+    </td>
+  </tr>
+</table>
+
+</body>
+</html>

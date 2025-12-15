@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
+    <meta name="color-scheme" content="light">
+    <meta name="supported-color-schemes" content="light">
+    <!--[if !mso]><!-->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link href="https://fonts.googleapis.com/css2?family=Rethink+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700&display=swap" rel="stylesheet">
+    <!--<![endif]-->
+    <style>
+        /* Force white text on CTA buttons - TOUJOURS */
+        .cta-button, .cta-button *, .cta-button a, .cta-button font {
+            color: #ffffff !important;
+        }
+        
+        /* Neutralize auto-link detection */
+        a[x-apple-data-detectors], 
+        a[x-apple-data-detectors] *, 
+        u + #body a, 
+        #MessageViewBody a {
+            color: inherit !important;
+            text-decoration: none !important;
+            background-color: transparent !important;
+        }
+    </style>
+    <title>Kandi - Votre profil vous attend</title>
+</head>
+<body style="margin:0;padding:0;background-color:#ffffff;color:#000000;font-family:'Rethink Sans', -apple-system, BlinkMacSystemFont, Arial, sans-serif;">
+
+<!-- Wrapper 100% width -->
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="background-color:#ffffff;">
+    <tr>
+        <td align="center" style="padding:20px 0;">
+            
+            <!-- Main container 600px -->
+            <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="600" style="background-color:#ffffff;border-radius:8px;max-width:600px;border:1px solid #e5e5e5;">
+                
+                <!-- Header avec logo -->
+                <tr>
+                    <td align="center" style="padding:40px 20px 20px;background-color:#ffffff;">
+                        <!-- Logo Kandi sur fond blanc avec bordures arrondies -->
+                        <img src="https://i.imgur.com/Id9eQMh.png" alt="Kandi" width="180" height="auto" style="display:block;border:0;border-radius:8px;">
+                    </td>
+                </tr>
+                
+                <!-- Content principal -->
+                <tr>
+                    <td style="padding:0 30px 60px 30px;">
+                        
+                        <!-- Salutation -->
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                            <tr>
+                                <td style="padding:20px 0;font-size:32px;color:#000000;font-weight:500;font-family:'Rethink Sans', Arial, sans-serif;letter-spacing:-0.5px;">
+                                    Bonjour {{ contact.FIRST_NAME | default:"" }},
+                                </td>
+                            </tr>
+                        </table>
+                        
+                        <!-- Message principal - Hook + CTA immédiat -->
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                            <tr>
+                                <td style="padding:10px 0 30px 0;font-size:20px;line-height:1.6;color:#000000;font-family:'Rethink Sans', Arial, sans-serif;font-weight:300;">
+                                    Notre IA a aidé <strong style="color:#6e2fde;font-weight:500;">plus de 4000 personnes</strong> à trouver leur emploi, stage ou alternance. Il manque juste ton CV et ton paiement pour avoir des réponses en 48H.
+                                </td>
+                            </tr>
+                        </table>
+                        
+                        <!-- CTA Principal SIMPLE - Above the fold -->
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                            <tr>
+                                <td align="center" style="padding:30px 0;">
+                                    <table role="presentation" cellspacing="0" cellpadding="0" border="0">
+                                        <tr>
+                                            <td class="cta-button" style="background-color:#6e2fde;border-radius:8px;padding:18px 35px;">
+                                                <a href="https://kandi.jobs/formulaire/step-2?email={{ contact.EMAIL }}&tel={{ contact.SMS }}&prenom={{ contact.FIRST_NAME }}&nom={{ contact.LAST_NAME }}&gender={{ contact.GENDER | default:"" }}&is_from_mail=1&mail_id=19" 
+                                                   style="color:#FFFFFF !important;font-size:20px;font-weight:700;text-decoration:none;display:block;font-family:'Rethink Sans', Arial, sans-serif;letter-spacing:0.5px;text-align:center;">
+                                                    <font color="#FFFFFF" style="color:#FFFFFF !important;font-weight:700;font-size:20px;font-family:'Rethink Sans', Arial, sans-serif;text-align:center;">Lancer l'IA pour me trouver un job</font>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                        
+                        <!-- Section "Comment ça marche" -->
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                            <tr>
+                                <td style="padding:50px 0 30px;font-size:28px;color:#000000;font-weight:500;font-family:'Rethink Sans', Arial, sans-serif;letter-spacing:-0.5px;">
+                                    Comment ça marche ?
+                                </td>
+                            </tr>
+                        </table>
+                        
+                        <!-- Étape 1 -->
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="background-color:#f0f8ff;border:2px solid #6e2fde;border-radius:8px;margin-bottom:16px;">
+                            <tr>
+                                <td style="padding:20px;">
+                                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                        <tr>
+                                            <td style="font-size:18px;color:#6e2fde;font-weight:600;padding-bottom:8px;">
+                                                1️⃣ Tu déposes ton CV et définis ton poste idéal
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-size:16px;color:#000000;font-weight:300;line-height:1.5;">
+                                                En 5 minutes, tu configures ton profil et tes préférences
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                        
+                        <!-- Étape 2 -->
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="background-color:#f0f8ff;border:2px solid #6e2fde;border-radius:8px;margin-bottom:16px;">
+                            <tr>
+                                <td style="padding:20px;">
+                                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                        <tr>
+                                            <td style="font-size:18px;color:#6e2fde;font-weight:600;padding-bottom:8px;">
+                                                2️⃣ Tu choisis ton budget
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-size:16px;color:#000000;font-weight:300;line-height:1.5;">
+                                                À partir de 30€ - Kandi n'est pas une plateforme habituelle où tu postules dans le vide, sans réponses. Notre IA démarche directement les entreprises
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                        
+                        <!-- Étape 3 -->
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="background-color:#f0f8ff;border:2px solid #6e2fde;border-radius:8px;margin-bottom:16px;">
+                            <tr>
+                                <td style="padding:20px;">
+                                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                        <tr>
+                                            <td style="font-size:18px;color:#6e2fde;font-weight:600;padding-bottom:8px;">
+                                                3️⃣ Notre IA contacte directement les entreprises
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-size:16px;color:#000000;font-weight:300;line-height:1.5;">
+                                                Elle va chercher des milliers de recruteurs qui ont besoin de ton profil, même sans offre publiée, instantanément
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                        
+                        <!-- Statistiques clés -->
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="background-color:#f0f9ff;border:2px solid #bae6fd;border-radius:8px;margin:30px 0;">
+                            <tr>
+                                <td style="padding:25px;text-align:center;">
+                                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                        <tr>
+                                            <td style="font-size:20px;color:#000000;font-weight:600;padding-bottom:10px;">
+                                                🎯 90% des utilisateurs reçoivent en moyenne 4 réponses dans les 48H
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-size:16px;color:#000000;font-weight:300;">
+                                                Grâce à notre IA qui va chercher les recruteurs qui ont besoin de ton profil
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                        
+                        <!-- Marché caché explication -->
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="background-color:#f0f8ff;border:2px solid #6e2fde;border-radius:8px;margin:30px 0;">
+                            <tr>
+                                <td style="padding:25px;">
+                                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                        <tr>
+                                            <td style="font-size:20px;color:#6e2fde;font-weight:600;padding-bottom:15px;">
+                                                🚀 Accès au marché caché de l'emploi
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-size:16px;color:#000000;font-weight:300;line-height:1.6;">
+                                                Nos candidatures sont envoyées directement sur le <strong style="color:#6e2fde;font-weight:500;">marché caché</strong> : l'IA contacte les recruteurs qui n'ont pas encore mis d'offre d'emploi et pourtant qui ont besoin d'un profil comme le tien.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-size:16px;color:#000000;font-weight:300;line-height:1.6;padding-top:10px;">
+                                                <strong style="color:#6e2fde;font-weight:500;">70% de nos placements</strong> se font via ces opportunités non-publiées, avec beaucoup moins de compétition pour de meilleurs postes.
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                        
+                        <!-- Social proof -->
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="background-color:#f0f9ff;border:2px solid #bae6fd;border-radius:8px;margin:30px 0;">
+                            <tr>
+                                <td style="padding:25px;text-align:center;">
+                                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                        <tr>
+                                            <td style="font-size:18px;color:#000000;font-weight:500;padding-bottom:10px;">
+                                                💼 Plus de 4000 personnes ont déjà trouvé leur emploi avec Kandi
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-size:16px;color:#000000;font-weight:300;">
+                                                Rejoins les candidats qui ont transformé leur recherche d'emploi
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                        
+                        <!-- CTA Final -->
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                            <tr>
+                                <td align="center" style="padding:40px 0;">
+                                    <table role="presentation" cellspacing="0" cellpadding="0" border="0">
+                                        <tr>
+                                            <td class="cta-button" style="background-color:#6e2fde;border-radius:8px;padding:18px 35px;">
+                                                <a href="https://kandi.jobs/formulaire/step-2?email={{ contact.EMAIL }}&tel={{ contact.SMS }}&prenom={{ contact.FIRST_NAME }}&nom={{ contact.LAST_NAME }}&gender={{ contact.GENDER | default:"" }}&is_from_mail=1&mail_id=19" 
+                                                   style="color:#FFFFFF !important;font-size:20px;font-weight:700;text-decoration:none;display:block;font-family:'Rethink Sans', Arial, sans-serif;letter-spacing:0.5px;text-align:center;">
+                                                    <font color="#FFFFFF" style="color:#FFFFFF !important;font-weight:700;font-size:20px;font-family:'Rethink Sans', Arial, sans-serif;text-align:center;">Activer ma recherche automatisée</font>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                        
+                        <!-- Conseil final -->
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="background-color:#fffbeb;border:2px solid #f59e0b;border-radius:8px;">
+                            <tr>
+                                <td style="padding:20px;font-size:14px;color:#000000;font-weight:400;">
+                                    <strong style="color:#f59e0b;font-weight:600;">Conseil :</strong><br><br>
+                                    Plus tu finalises tôt ton profil, plus vite tu accèdes aux opportunités du marché caché. Notre IA commence à travailler immédiatement après validation.
+                                </td>
+                            </tr>
+                        </table>
+                        
+                    </td>
+                </tr>
+                
+                <!-- Footer avec image de fond -->
+                <tr>
+                    <td style="padding:0;background-image:url('https://i.imgur.com/3Dg1zxQ.jpeg');background-size:cover;background-position:center;background-color:#1a1a1a;">
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                            <tr>
+                                <td style="padding:40px 30px;text-align:center;background-color:rgba(0,0,0,0.6);">
+                                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                        <tr>
+                                            <td style="font-size:14px;color:#ffffff;font-style:italic;padding-bottom:15px;font-family:'Rethink Sans', Arial, sans-serif;">
+                                                Cet email a été envoyé automatiquement car ton profil Kandi n'est pas encore finalisé
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-size:14px;color:#ffffff;padding-bottom:15px;font-family:'Rethink Sans', Arial, sans-serif;">
+                                                Besoin d'aide ? Notre équipe répond sous 2h : 
+                                                <a href="mailto:contact@kandi.jobs" style="color:#e498fc;text-decoration:none;font-weight:500;">contact@kandi.jobs</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-size:12px;color:#cccccc;font-family:'Rethink Sans', Arial, sans-serif;">
+                                                <a href="{{ unsubscribe }}" style="color:#cccccc;text-decoration:none;">Se désabonner</a> | 
+                                                <a href="https://kandi.jobs" style="color:#cccccc;text-decoration:none;">kandi.jobs</a>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                
+            </table>
+            
+        </td>
+    </tr>
+</table>
+
+</body>
+</html>
+
+
